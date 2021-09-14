@@ -1,0 +1,21 @@
+/* line 1, ../../src/scss/grid.scss */
+.prime-container {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 1fr 10% 1fr;
+  grid-template-areas: "top" "middlebanner" "bottom";
+}
+/* line 9, ../../src/scss/grid.scss */
+.prime-container_top {
+  grid-area: top;
+}
+/* line 12, ../../src/scss/grid.scss */
+.prime-container_middlebanner {
+  grid-area: middlebanner;
+}
+/* line 14, ../../src/scss/grid.scss */
+ig
+.prime-container_bottom {
+  grid-area: bottom;
+}

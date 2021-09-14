@@ -1,0 +1,21 @@
+.prime-container{
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	grid-template-rows: 1fr 10% 1fr;
+	grid-template-areas: "top"
+						 "middlebanner"
+						 "bottom";
+	&_top{
+		grid-area: top;
+	}
+	&_middlebanner{
+		grid-area: middlebanner;
+	}ig
+	&_bottom{
+		grid-area: bottom;
+	}
+}
+
+.grid-two-rows{}
+.grid-three-rows{}

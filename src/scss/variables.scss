@@ -1,0 +1,9 @@
+$hue:230;
+$color1: hsl($hue,75%,15%);
+$color2: hsl($hue,54%,15%);
+
+/*MIXINs*/
+@mixin line($w,$color){
+	border: $w $color solid;
+}
+

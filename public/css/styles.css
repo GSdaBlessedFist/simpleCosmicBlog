@@ -1,0 +1,91 @@
+/*MIXINs*/
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+/* line 1, ../../src/scss/grid.scss */
+.prime-container {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 1fr 10% 1fr;
+  grid-template-areas: "top" "middlebanner" "bottom";
+}
+/* line 9, ../../src/scss/grid.scss */
+.prime-container_top {
+  grid-area: top;
+}
+/* line 12, ../../src/scss/grid.scss */
+.prime-container_middlebanner {
+  grid-area: middlebanner;
+}
+/* line 14, ../../src/scss/grid.scss */
+ig
+.prime-container_bottom {
+  grid-area: bottom;
+}
+
+/* line 3, ../../src/scss/topSection.scss */
+.top {
+  display: flex;
+  width: 100%;
+  height: 412px;
+  flex-direction: columns;
+}
+/* line 9, ../../src/scss/topSection.scss */
+.top_section {
+  text-align: center;
+  width: 100%;
+  flex-grow: 1;
+  background: #0a1343;
+  color: white;
+  border: 1px white solid;
+}
+
+/* line 18, ../../src/scss/topSection.scss */
+.chosenTopSection {
+  width: 500px;
+  background: #12183b;
+}
+
+/* line 1, ../../src/scss/middlebanner.scss */
+.prime-container_middlebanner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #223;
+}
+
+/* line 8, ../../src/scss/middlebanner.scss */
+.middlebanner-text {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* line 3, ../../src/scss/bottomSection.scss */
+.bottom {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: columns;
+}
+/* line 8, ../../src/scss/bottomSection.scss */
+.bottom_section {
+  text-align: center;
+  width: 100%;
+  background: #0a1343;
+  color: white;
+  border: 1px white solid;
+}
+
+/* line 16, ../../src/scss/bottomSection.scss */
+.chosenBottomSection {
+  width: 560px;
+  background: #12183b;
+}
+
+/* line 7, ../../src/scss/styles.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
