@@ -28,6 +28,8 @@ hbs.registerHelper('increment', (index)=>{
 });
 hbs.registerHelper('removeHTML',(content)=>{
 	//REGEX for removing HTML tags in string
+
+	//FIX NEEDED: removes aposterphes too
 	const reg = /(<([^>]+)>)/ig;
 	return content.replace(reg,"");
 })
@@ -42,13 +44,14 @@ app.get("/", async(req, res) => {
 		query:{
 			type: "comments"
 		},
-		props: "id,slug,title,content,metafields"
+		props: "id,slug,title,content,metadata"
 	})
 	let posts = data.objects;
 	let colors = {
 		color1: "hsl(30,50%,50%)",
 		color2: "hsl(50,75%,50%)"
 	}
+	console.log(posts[0].metadata.summary)
   res.render('index',{posts});
 });
 

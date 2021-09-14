@@ -1,12 +1,12 @@
 @import "variables";
 @import "fonts";
 @import "grid";
-@import "topSection";
-@import "middlebanner";
-@import "bottomSection";
+@import "posts";
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	color: white;
+	background: hsla(230,100%,1%,.75);
 }
 

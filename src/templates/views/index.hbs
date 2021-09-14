@@ -9,35 +9,51 @@
 </head>
 <body>
 
-	<div class="prime-container ">
-		<div class="prime-container_top  ">
-			<div class="top ">
-				<div class="top_section " data-section="1">one</div>
-				<div class="top_section " data-section="2">two</div>
-				<div class="top_section " data-section="3">three</div>
-				<div class="top_section " data-section="4">four</div>
+	<div class="prime-container">
+		<div class="prime-container--section hero-column">hero</div>
+		<!-----------------TITLE SECTION----------------------->
+		<div class="prime-container--section title-column">
+			<div class="title-column_title-main">
+				<h2>a simple blog layout
+				</h2>
+			</div>
+			<div class="title-column_image">title picture</div>
+		</div>
+		<!-----------------SKILLS SECTION----------------------->
+		<div class="prime-container--section skills-column">
+			<div class="skills-column_image-container">skills picture
+				<div class="skills-column_image-container--button-group">
+					<button class="github-button">github</button>
+					<button class="close-button">close technical stuff</button>
+			</div>
+			</div>
+			
+			<div class="skills-column_skills-main">
+				<h2>skills used</h2>
 			</div>
 		</div>
-		<div class="prime-container_middlebanner ">
-			<div class="middlebanner-text">simple blog powered by cosmicjs headless cms
-			</div>
-		</div>
-		<div class="prime-container_bottom ">
-			<div class="bottom ">
-				<div class="bottom_section " data-section="5">five</div>
-				<div class="bottom_section " data-section="6">six</div>
-				<div class="bottom_section " data-section="7">seven</div>
-				<div class="bottom_section " data-section="8">eight</div>
-			</div>
+		<!-----------------POSTS SECTION----------------------->
+		<div class="prime-container--section posts-column">
+			{{#each posts}}
+				<div class="posts-column--post-container" data-post={{increment @index}}>
+					<div class="post-titlebar">
+						<div class="post-titlebar_title">title</div>
+						<div class="post-titlebar_date">date</div>
+					</div>
+					
+					<div class="post-summary">{{metadata.summary}}</div>
+					
+				</div>
+
+			{{/each}}
 		</div>
 	</div>
 
 
 
 
-	<!-- {{#each posts}}
-	<div class="post-{{increment @index}}">{{title}}</div>
-	<h3>{{removeHTML content}}</h3>
-	{{/each}} -->
+	
 </body>
 </html>
+
+lorem

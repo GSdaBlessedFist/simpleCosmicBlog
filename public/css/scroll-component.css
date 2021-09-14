@@ -1,24 +1,28 @@
 /*
-Error: Undefined mixin 'font1'.
-        on line 11 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/middlebanner.scss, in `font1'
-        from line 11 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/middlebanner.scss
+Error: Undefined variable: "$color1".
+        on line 18 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/scroll-component.scss
 
-6: 	background: #223;
-7: }
-8: .middlebanner-text{
-9: 	color: white;
-10: 	font-size: 2rem;
-11: 	@include font1;
-12: }
+13: 
+14: /* Handle *\/
+15: ::-webkit-scrollbar-thumb {
+16:   background: transparent;
+17:   border-radius: 15px;
+18:   box-shadow: inset 2px 0px 2px $color1;
+19: }
+20: 
+21: /* Handle on hover *\/
+22: ::-webkit-scrollbar-thumb:hover {
+23:   background: darken($color1, 15%);
 
 Backtrace:
-/home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/middlebanner.scss:11:in `font1'
-/home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/middlebanner.scss:11
-/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:352:in `block in visit_mixin'
-/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `block in with_mixin'
-/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
-/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/stack.rb:98:in `with_mixin'
-/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:350:in `visit_mixin'
+/home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/scroll-component.scss:18
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/script/tree/variable.rb:49:in `_perform'
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `map'
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/script/tree/list_literal.rb:63:in `_perform'
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/script/tree/node.rb:58:in `perform'
+/var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
 /var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
 /var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 /var/lib/gems/2.7.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
@@ -68,4 +72,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font1'.\A         on line 11 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/middlebanner.scss, in `font1'\A         from line 11 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/middlebanner.scss\A \A 6: 	background: #223;\A 7: }\A 8: .middlebanner-text{\A 9: 	color: white;\A 10: 	font-size: 2rem;\A 11: 	@include font1;\A 12: }"; }
+  content: "Error: Undefined variable: \"$color1\".\A         on line 18 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/scroll-component.scss\A \A 13: \A 14: /* Handle */\A 15: ::-webkit-scrollbar-thumb {\A 16:   background: transparent;\A 17:   border-radius: 15px;\A 18:   box-shadow: inset 2px 0px 2px $color1;\A 19: }\A 20: \A 21: /* Handle on hover */\A 22: ::-webkit-scrollbar-thumb:hover {\A 23:   background: darken($color1, 15%);"; }

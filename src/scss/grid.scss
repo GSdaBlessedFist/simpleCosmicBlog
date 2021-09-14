@@ -1,21 +1,78 @@
+@import "variables";
+
 .prime-container{
 	display: grid;
+	grid-template-columns: 25% 25% 25% 25% ;
+	grid-template-areas: "hero title skills sect4";
 	width: 100%;
 	height: 100vh;
-	grid-template-rows: 1fr 10% 1fr;
-	grid-template-areas: "top"
-						 "middlebanner"
-						 "bottom";
-	&_top{
-		grid-area: top;
-	}
-	&_middlebanner{
-		grid-area: middlebanner;
-	}ig
-	&_bottom{
-		grid-area: bottom;
+	&--section{
+		@include line(2px,hsla(30,100%,100%,.45));
 	}
 }
+.hero-column{
+	grid-area: hero;
+}
+.title-column{
+	grid-area: title;
+	display: grid;
+	width: 100%;
+	grid-template-rows: 55% 1fr;
+	grid-template-areas: "titleContent"
+						 "titleImage";
+	&_title-main{
+		grid-area: titleContent;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+		width: 100%;
+		position: relative;
+		text-align: center;
+		padding: 10px 20px;
+		@include line(2px,hsla(30,100%,100%,.45));
+		&>h2{
 
-.grid-two-rows{}
-.grid-three-rows{}
+		}
+	}
+	&_image{
+		grid-area: titleImage;
+		width: 100%;
+		@include line(2px,hsla(30,100%,100%,.45));
+	}
+}
+.skills-column{
+	grid-area: skills;
+	display: grid;
+	width: 100%;
+	grid-template-rows: 1fr 65%;
+	grid-template-areas: "skillsImage"
+						 "skillsContent";
+	&_image-container{
+		grid-area: skillsImage;
+		@include line(2px,hsla(30,100%,100%,.45));
+		&--button-group{
+			@include line(2px,blue);
+			@at-root{
+				.github-button{}
+				.close-button{}
+			}
+		}
+	}
+	&_skills-main{
+		grid-area: skillsContent;
+		@include line(2px,hsla(30,100%,100%,.45));
+		&>h2{
+
+		}
+	}
+}
+.posts-column{
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+	&--post-container{
+		width: 100%;
+		background: hsla(230,100%,70%,.25);
+		@include line(2px,hsla(30,100%,100%,.45));
+	}
+}

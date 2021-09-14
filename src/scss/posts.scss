@@ -1,0 +1,24 @@
+@import "variables";
+
+.post-titlebar{
+	display: inline;
+	width: 100%;
+	text-align: center;
+	font-size: 1.5rem;
+	color: white;
+	padding: 5px 10px;
+	overflow:hidden;
+	background: hsla(30,100%,100%,.05);
+	border-bottom: 1px solid hsla(30,100%,100%,.25);
+	&_date{
+		position: relative;
+		font-size: .75rem;
+		top: -20px;
+	}
+}
+.post-summary{
+	display: block;
+	padding: 20px;
+	text-align: center;
+	font-size: .85rem;
+}

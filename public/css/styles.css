@@ -1,91 +1,118 @@
 /*MIXINs*/
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
-/* line 1, ../../src/scss/grid.scss */
+/* line 3, ../../src/scss/grid.scss */
 .prime-container {
   display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "hero title skills sect4";
   width: 100%;
   height: 100vh;
-  grid-template-rows: 1fr 10% 1fr;
-  grid-template-areas: "top" "middlebanner" "bottom";
 }
 /* line 9, ../../src/scss/grid.scss */
-.prime-container_top {
-  grid-area: top;
-}
-/* line 12, ../../src/scss/grid.scss */
-.prime-container_middlebanner {
-  grid-area: middlebanner;
-}
-/* line 14, ../../src/scss/grid.scss */
-ig
-.prime-container_bottom {
-  grid-area: bottom;
+.prime-container--section {
+  border: 2px rgba(255, 255, 255, 0.45) solid;
 }
 
-/* line 3, ../../src/scss/topSection.scss */
-.top {
+/* line 13, ../../src/scss/grid.scss */
+.hero-column {
+  grid-area: hero;
+}
+
+/* line 16, ../../src/scss/grid.scss */
+.title-column {
+  grid-area: title;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 55% 1fr;
+  grid-template-areas: "titleContent" "titleImage";
+}
+/* line 23, ../../src/scss/grid.scss */
+.title-column_title-main {
+  grid-area: titleContent;
   display: flex;
-  width: 100%;
-  height: 412px;
-  flex-direction: columns;
-}
-/* line 9, ../../src/scss/topSection.scss */
-.top_section {
-  text-align: center;
-  width: 100%;
-  flex-grow: 1;
-  background: #0a1343;
-  color: white;
-  border: 1px white solid;
-}
-
-/* line 18, ../../src/scss/topSection.scss */
-.chosenTopSection {
-  width: 500px;
-  background: #12183b;
-}
-
-/* line 1, ../../src/scss/middlebanner.scss */
-.prime-container_middlebanner {
-  display: flex;
-  width: 100%;
   justify-content: center;
-  align-items: center;
-  background: #223;
-}
-
-/* line 8, ../../src/scss/middlebanner.scss */
-.middlebanner-text {
-  color: white;
-  font-size: 2rem;
-  font-family: 'Urbanist', sans-serif;
-}
-
-/* line 3, ../../src/scss/bottomSection.scss */
-.bottom {
-  display: flex;
+  align-items: flex-end;
   width: 100%;
-  height: 100%;
-  flex-direction: columns;
-}
-/* line 8, ../../src/scss/bottomSection.scss */
-.bottom_section {
+  position: relative;
   text-align: center;
+  padding: 10px 20px;
+  border: 2px rgba(255, 255, 255, 0.45) solid;
+}
+/* line 37, ../../src/scss/grid.scss */
+.title-column_image {
+  grid-area: titleImage;
   width: 100%;
-  background: #0a1343;
+  border: 2px rgba(255, 255, 255, 0.45) solid;
+}
+
+/* line 43, ../../src/scss/grid.scss */
+.skills-column {
+  grid-area: skills;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr 65%;
+  grid-template-areas: "skillsImage" "skillsContent";
+}
+/* line 50, ../../src/scss/grid.scss */
+.skills-column_image-container {
+  grid-area: skillsImage;
+  border: 2px rgba(255, 255, 255, 0.45) solid;
+}
+/* line 53, ../../src/scss/grid.scss */
+.skills-column_image-container--button-group {
+  border: 2px blue solid;
+}
+/* line 61, ../../src/scss/grid.scss */
+.skills-column_skills-main {
+  grid-area: skillsContent;
+  border: 2px rgba(255, 255, 255, 0.45) solid;
+}
+
+/* line 69, ../../src/scss/grid.scss */
+.posts-column {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+/* line 73, ../../src/scss/grid.scss */
+.posts-column--post-container {
+  width: 100%;
+  background: rgba(102, 128, 255, 0.25);
+  border: 2px rgba(255, 255, 255, 0.45) solid;
+}
+
+/* line 3, ../../src/scss/posts.scss */
+.post-titlebar {
+  display: inline;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
   color: white;
-  border: 1px white solid;
+  padding: 5px 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+/* line 13, ../../src/scss/posts.scss */
+.post-titlebar_date {
+  position: relative;
+  font-size: .75rem;
+  top: -20px;
 }
 
-/* line 16, ../../src/scss/bottomSection.scss */
-.chosenBottomSection {
-  width: 560px;
-  background: #12183b;
+/* line 19, ../../src/scss/posts.scss */
+.post-summary {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: .85rem;
 }
 
-/* line 7, ../../src/scss/styles.scss */
+/* line 5, ../../src/scss/styles.scss */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white;
+  background: rgba(0, 1, 5, 0.75);
 }
