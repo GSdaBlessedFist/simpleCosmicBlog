@@ -40,19 +40,33 @@ app.use('/', (req, res, next) => {
 ///////////////////////////////////////////////////////////
 
 app.get("/", async(req, res) => {
-	let data = await bucket.getObjects({
+	let homepageData = await bucket.getObject({
+  id: '613f5b78695852000929437b',
+  props: 'title,content'
+})
+	let postData = await bucket.getObjects({
 		query:{
 			type: "comments"
 		},
 		props: "id,slug,title,content,metadata"
 	})
-	let posts = data.objects;
+	let homepageInfo = {
+		"homepage": homepageData.object	
+	};
+	let postsInfo = {
+		"posts":postData.objects
+	};
+	let dataset = {
+		...homepageInfo,
+		...postsInfo
+	}
 	let colors = {
 		color1: "hsl(30,50%,50%)",
 		color2: "hsl(50,75%,50%)"
 	}
-	console.log(posts[0].metadata.summary)
-  res.render('index',{posts});
+	console.log("#########################################")
+	console.log(dataset)
+  res.render('index',{dataset});
 });
 
 app.listen(port, () => {

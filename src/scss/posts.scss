@@ -1,22 +1,27 @@
 @import "variables";
 
 .post-titlebar{
-	display: inline;
+	grid-area: posttitle;
+	display: block;
 	width: 100%;
-	text-align: center;
-	font-size: 1.5rem;
-	color: white;
-	padding: 5px 10px;
 	overflow:hidden;
-	background: hsla(30,100%,100%,.05);
+	@include font1;
+	font-weight: 900;
+	background: hsla(30,100%,100%,.25);
 	border-bottom: 1px solid hsla(30,100%,100%,.25);
-	&_date{
-		position: relative;
-		font-size: .75rem;
-		top: -20px;
+	&_title{
+		grid-area: articleTitle;
+		width: 100%;
+		text-align: center;
+		padding: 10px 80px;
+		font-size: 1.5rem;
+		color: white;
+		
 	}
+	
 }
 .post-summary{
+	grid-area: postsummary;
 	display: block;
 	padding: 20px;
 	text-align: center;

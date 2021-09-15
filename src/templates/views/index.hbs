@@ -3,19 +3,17 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Simplolog</title>
+	<title>{{dataset.homepage.title}}</title>
 	<link rel="stylesheet" href="./css/styles.css">
 	<script src="./js/gridwork.js" defer></script>
 </head>
 <body>
-
 	<div class="prime-container">
 		<div class="prime-container--section hero-column">hero</div>
 		<!-----------------TITLE SECTION----------------------->
 		<div class="prime-container--section title-column">
 			<div class="title-column_title-main">
-				<h2>a simple blog layout
-				</h2>
+				<h4>{{removeHTML dataset.homepage.content}}</h4>
 			</div>
 			<div class="title-column_image">title picture</div>
 		</div>
@@ -27,7 +25,6 @@
 					<button class="close-button">close technical stuff</button>
 			</div>
 			</div>
-			
 			<div class="skills-column_skills-main">
 				<h2>skills used</h2>
 			</div>
@@ -35,25 +32,16 @@
 		<!-----------------POSTS SECTION----------------------->
 		<div class="prime-container--section posts-column">
 			{{#each posts}}
-				<div class="posts-column--post-container" data-post={{increment @index}}>
-					<div class="post-titlebar">
-						<div class="post-titlebar_title">title</div>
-						<div class="post-titlebar_date">date</div>
+				<a href="#" style="text-decoration: none;">
+					<div class="posts-column--post-container" data-post={{increment @index}}>
+						<div class="post-titlebar">
+							<div class="post-titlebar_title">{{posts.title}}</div>
+						</div>
+						<div class="post-summary">{{posts.metadata.summary}}</div>
 					</div>
-					
-					<div class="post-summary">{{metadata.summary}}</div>
-					
-				</div>
-
+				</a>
 			{{/each}}
 		</div>
 	</div>
-
-
-
-
-	
 </body>
 </html>
-
-lorem

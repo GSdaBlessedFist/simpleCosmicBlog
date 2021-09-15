@@ -1,23 +1,25 @@
 /*MIXINs*/
-/* line 3, ../../src/scss/grid.scss */
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+/* line 4, ../../src/scss/grid.scss */
 .prime-container {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "hero title skills sect4";
   width: 100%;
   height: 100vh;
+  overflow-y: hidden;
 }
-/* line 9, ../../src/scss/grid.scss */
+/* line 10, ../../src/scss/grid.scss */
 .prime-container--section {
   border: 2px rgba(255, 255, 255, 0.45) solid;
 }
 
-/* line 13, ../../src/scss/grid.scss */
+/* line 15, ../../src/scss/grid.scss */
 .hero-column {
   grid-area: hero;
 }
 
-/* line 16, ../../src/scss/grid.scss */
+/* line 18, ../../src/scss/grid.scss */
 .title-column {
   grid-area: title;
   display: grid;
@@ -25,7 +27,7 @@
   grid-template-rows: 55% 1fr;
   grid-template-areas: "titleContent" "titleImage";
 }
-/* line 23, ../../src/scss/grid.scss */
+/* line 25, ../../src/scss/grid.scss */
 .title-column_title-main {
   grid-area: titleContent;
   display: flex;
@@ -37,14 +39,18 @@
   padding: 10px 20px;
   border: 2px rgba(255, 255, 255, 0.45) solid;
 }
-/* line 37, ../../src/scss/grid.scss */
+/* line 35, ../../src/scss/grid.scss */
+.title-column_title-main > h2 {
+  font-family: 'Urbanist', sans-serif;
+}
+/* line 39, ../../src/scss/grid.scss */
 .title-column_image {
   grid-area: titleImage;
   width: 100%;
   border: 2px rgba(255, 255, 255, 0.45) solid;
 }
 
-/* line 43, ../../src/scss/grid.scss */
+/* line 45, ../../src/scss/grid.scss */
 .skills-column {
   grid-area: skills;
   display: grid;
@@ -52,30 +58,33 @@
   grid-template-rows: 1fr 65%;
   grid-template-areas: "skillsImage" "skillsContent";
 }
-/* line 50, ../../src/scss/grid.scss */
+/* line 52, ../../src/scss/grid.scss */
 .skills-column_image-container {
   grid-area: skillsImage;
   border: 2px rgba(255, 255, 255, 0.45) solid;
 }
-/* line 53, ../../src/scss/grid.scss */
+/* line 55, ../../src/scss/grid.scss */
 .skills-column_image-container--button-group {
   border: 2px blue solid;
 }
-/* line 61, ../../src/scss/grid.scss */
+/* line 63, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border: 2px rgba(255, 255, 255, 0.45) solid;
 }
 
-/* line 69, ../../src/scss/grid.scss */
+/* line 71, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 }
-/* line 73, ../../src/scss/grid.scss */
+/* line 75, ../../src/scss/grid.scss */
 .posts-column--post-container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "posttitle" "postsummary";
   width: 100%;
+  margin: 0;
   background: rgba(102, 128, 255, 0.25);
-  border: 2px rgba(255, 255, 255, 0.45) solid;
 }

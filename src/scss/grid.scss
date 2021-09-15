@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 
 .prime-container{
 	display: grid;
@@ -9,6 +10,7 @@
 	&--section{
 		@include line(2px,hsla(30,100%,100%,.45));
 	}
+	overflow-y:hidden;
 }
 .hero-column{
 	grid-area: hero;
@@ -31,7 +33,7 @@
 		padding: 10px 20px;
 		@include line(2px,hsla(30,100%,100%,.45));
 		&>h2{
-
+			@include font1;
 		}
 	}
 	&_image{
@@ -71,8 +73,13 @@
 	flex-direction: column;
 	overflow-y: auto;
 	&--post-container{
+		display: grid;
+		grid-template-rows: auto 1fr;
+		grid-template-areas: "posttitle"
+							"postsummary";
 		width: 100%;
+		margin: 0;
 		background: hsla(230,100%,70%,.25);
-		@include line(2px,hsla(30,100%,100%,.45));
+		
 	}
 }
