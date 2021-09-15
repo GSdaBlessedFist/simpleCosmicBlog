@@ -30,7 +30,7 @@ hbs.registerHelper('removeHTML',(content)=>{
 	//REGEX for removing HTML tags in string
 
 	//FIX NEEDED: removes aposterphes too
-	const reg = /(<([^>]+)>)/ig;
+	const reg = /<.*?>/ig;
 	return content.replace(reg,"");
 })
 app.use('/', (req, res, next) => {
@@ -50,15 +50,22 @@ app.get("/", async(req, res) => {
 		},
 		props: "id,slug,title,content,metadata"
 	})
+	let picturesData = await bucket.getMedia({
+		props: "imgix_url"
+	})
 	let homepageInfo = {
 		"homepage": homepageData.object	
 	};
 	let postsInfo = {
 		"posts":postData.objects
 	};
+	let picturesInfo = {
+		"pictures":picturesData.media
+	}
 	let dataset = {
 		...homepageInfo,
-		...postsInfo
+		...postsInfo,
+		...picturesInfo
 	}
 	let colors = {
 		color1: "hsl(30,50%,50%)",
@@ -66,6 +73,9 @@ app.get("/", async(req, res) => {
 	}
 	console.log("#########################################")
 	console.log(dataset)
+	console.log("#######################################")
+	console.log(dataset.pictures[3].imgix_url)
+	console.log("#######################################")
   res.render('index',{dataset});
 });
 

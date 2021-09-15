@@ -1,19 +1,27 @@
 @import "variables";
 @import "fonts";
-
 .prime-container{
 	display: grid;
-	grid-template-columns: 25% 25% 25% 25% ;
+	// grid-template-columns: 25% 25% 25% 25%;
+	grid-template-columns: 50% 25.9% .1% 25%;
 	grid-template-areas: "hero title skills sect4";
 	width: 100%;
 	height: 100vh;
 	&--section{
-		@include line(2px,hsla(30,100%,100%,.45));
+		// @include line(2px,hsla(30,100%,100%,.45));
 	}
 	overflow-y:hidden;
 }
 .hero-column{
 	grid-area: hero;
+	@at-root{
+		.hero-pic{
+			display: block;
+			width: 100%;
+		    object-fit: cover;
+			height: 100%;
+		}
+	}
 }
 .title-column{
 	grid-area: title;
@@ -28,18 +36,44 @@
 		justify-content: center;
 		align-items: flex-end;
 		width: 100%;
+		background: $color2;
 		position: relative;
 		text-align: center;
-		padding: 10px 20px;
-		@include line(2px,hsla(30,100%,100%,.45));
-		&>h2{
-			@include font1;
+		line-height: 25px;
+		padding: 20px 40px;
+		@include font1;
+		text-shadow: 0px 2px 5px darken($color2,25%);
+		@include line(5px,black);
+		&>div{
+			background: transparent;
+			font-size: 2rem;
+			
+		}
+		@at-root{
+			.title-sub{
+				background: inherit;
+				font-size: 1.25rem;
+				color: rgba(255,255,255,.65);
+			}
 		}
 	}
 	&_image{
 		grid-area: titleImage;
 		width: 100%;
-		@include line(2px,hsla(30,100%,100%,.45));
+		border: none;
+		// @include line(2px,hsla(30,100%,100%,.45));
+		@at-root{
+			.title-pic {
+			display: block;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			background-position: 25% 37%;
+			background-size: contain;
+			background-repeat: no-repeat;
+}
+		}
 	}
 }
 .skills-column{
@@ -49,9 +83,10 @@
 	grid-template-rows: 1fr 65%;
 	grid-template-areas: "skillsImage"
 						 "skillsContent";
+	opacity: 0;
 	&_image-container{
 		grid-area: skillsImage;
-		@include line(2px,hsla(30,100%,100%,.45));
+		// @include line(2px,hsla(30,100%,100%,.45));
 		&--button-group{
 			@include line(2px,blue);
 			@at-root{
@@ -64,7 +99,6 @@
 		grid-area: skillsContent;
 		@include line(2px,hsla(30,100%,100%,.45));
 		&>h2{
-
 		}
 	}
 }
@@ -80,6 +114,7 @@
 		width: 100%;
 		margin: 0;
 		background: hsla(230,100%,70%,.25);
-		
+		@include line(2px,black);
+		border-left: 0px;
 	}
 }

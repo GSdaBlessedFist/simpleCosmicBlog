@@ -7,8 +7,8 @@
 	overflow:hidden;
 	@include font1;
 	font-weight: 900;
-	background: hsla(30,100%,100%,.25);
-	border-bottom: 1px solid hsla(30,100%,100%,.25);
+	background: $color2;
+	border-bottom: 1.5px solid darken($color2,25%);
 	&_title{
 		grid-area: articleTitle;
 		width: 100%;
@@ -16,7 +16,7 @@
 		padding: 10px 80px;
 		font-size: 1.5rem;
 		color: white;
-		
+		background: $color2;
 	}
 	
 }
@@ -26,4 +26,6 @@
 	padding: 20px;
 	text-align: center;
 	font-size: .85rem;
+	background: $color3;
+	color: $color2;
 }

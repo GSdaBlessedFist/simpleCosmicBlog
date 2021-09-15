@@ -9,13 +9,18 @@
 </head>
 <body>
 	<div class="prime-container">
-		<div class="prime-container--section hero-column">hero</div>
+		<div class="prime-container--section hero-column">
+			<img src="{{dataset.pictures.0.imgix_url}}" alt="artwork" class="hero-pic">
+			
+		</div>
 		<!-----------------TITLE SECTION----------------------->
 		<div class="prime-container--section title-column">
 			<div class="title-column_title-main">
-				<h4>{{removeHTML dataset.homepage.content}}</h4>
+				<div>Welcome to the blog<br><span class="title-sub"> a simple CosmicJS powered blog</span></div>
 			</div>
-			<div class="title-column_image">title picture</div>
+			<div class="title-column_image">
+				<img style="background-image:url('{{dataset.pictures.2.imgix_url}}')" alt="" class="title-pic">
+			</div>
 		</div>
 		<!-----------------SKILLS SECTION----------------------->
 		<div class="prime-container--section skills-column">
@@ -31,13 +36,13 @@
 		</div>
 		<!-----------------POSTS SECTION----------------------->
 		<div class="prime-container--section posts-column">
-			{{#each posts}}
+			{{#each dataset.posts}}
 				<a href="#" style="text-decoration: none;">
 					<div class="posts-column--post-container" data-post={{increment @index}}>
 						<div class="post-titlebar">
-							<div class="post-titlebar_title">{{posts.title}}</div>
+							<div class="post-titlebar_title">{{title}}</div>
 						</div>
-						<div class="post-summary">{{posts.metadata.summary}}</div>
+						<div class="post-summary">{{metadata.summary}}</div>
 					</div>
 				</a>
 			{{/each}}

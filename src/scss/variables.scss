@@ -1,6 +1,7 @@
-$hue:230;
-$color1: hsl($hue,75%,15%);
-$color2: hsl($hue,54%,15%);
+$hue:199;
+$color1: hsl($hue,87%,50%); 
+$color2: hsl($hue,87%,22%);
+$color3: hsl(219, 18%, 60%);
 
 /*MIXINs*/
 @mixin line($w,$color){

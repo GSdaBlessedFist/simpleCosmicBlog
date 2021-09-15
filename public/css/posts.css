@@ -10,8 +10,8 @@ Error: Undefined mixin 'font1'.
 7: 	overflow:hidden;
 8: 	@include font1;
 9: 	font-weight: 900;
-10: 	background: hsla(30,100%,100%,.25);
-11: 	border-bottom: 1px solid hsla(30,100%,100%,.25);
+10: 	background: $color2;
+11: 	border-bottom: 1.5px solid darken($color2,25%);
 12: 	&_title{
 13: 		grid-area: articleTitle;
 
@@ -72,4 +72,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'font1'.\A         on line 8 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/posts.scss, in `font1'\A         from line 8 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/posts.scss\A \A 3: .post-titlebar{\A 4: 	grid-area: posttitle;\A 5: 	display: block;\A 6: 	width: 100%;\A 7: 	overflow:hidden;\A 8: 	@include font1;\A 9: 	font-weight: 900;\A 10: 	background: hsla(30,100%,100%,.25);\A 11: 	border-bottom: 1px solid hsla(30,100%,100%,.25);\A 12: 	&_title{\A 13: 		grid-area: articleTitle;"; }
+  content: "Error: Undefined mixin 'font1'.\A         on line 8 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/posts.scss, in `font1'\A         from line 8 of /home/guyshifty/Desktop/_PORTFOLIO_/Simpolog/./src/scss/posts.scss\A \A 3: .post-titlebar{\A 4: 	grid-area: posttitle;\A 5: 	display: block;\A 6: 	width: 100%;\A 7: 	overflow:hidden;\A 8: 	@include font1;\A 9: 	font-weight: 900;\A 10: 	background: $color2;\A 11: 	border-bottom: 1.5px solid darken($color2,25%);\A 12: 	&_title{\A 13: 		grid-area: articleTitle;"; }
