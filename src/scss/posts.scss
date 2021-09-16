@@ -1,4 +1,5 @@
 @import "variables";
+@import "fonts";
 
 .post-titlebar{
 	grid-area: posttitle;
@@ -7,16 +8,18 @@
 	overflow:hidden;
 	@include font1;
 	font-weight: 900;
-	background: $color2;
-	border-bottom: 1.5px solid darken($color2,25%);
+	background: hsla($hue,87%,22%,1);
+	
+	border-bottom: 1.5px solid $color2;
 	&_title{
 		grid-area: articleTitle;
 		width: 100%;
 		text-align: center;
-		padding: 10px 80px;
+		padding: 10px 20px;
+		padding-bottom: 0;
 		font-size: 1.5rem;
 		color: white;
-		background: $color2;
+		/*background: $color2;*/
 	}
 	
 }
@@ -26,6 +29,15 @@
 	padding: 20px;
 	text-align: center;
 	font-size: .85rem;
-	background: $color3;
-	color: $color2;
+	background: transparent;
+	color: white;
+}
+
+.article-container{
+	display:none;
+	margin: 30px;
+	@include line(1px,red);
+}
+.article-title{
+	color: $color4;
 }

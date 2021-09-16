@@ -67,14 +67,13 @@ app.get("/", async(req, res) => {
 		...postsInfo,
 		...picturesInfo
 	}
+	
 	let colors = {
 		color1: "hsl(30,50%,50%)",
 		color2: "hsl(50,75%,50%)"
 	}
 	console.log("#########################################")
-	console.log(dataset)
-	console.log("#######################################")
-	console.log(dataset.pictures[3].imgix_url)
+	p(postsInfo.posts[3].content)
 	console.log("#######################################")
   res.render('index',{dataset});
 });

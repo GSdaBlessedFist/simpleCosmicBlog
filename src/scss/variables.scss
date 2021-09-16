@@ -1,6 +1,6 @@
 $hue:199;
 $color1: hsl($hue,87%,50%); 
-$color2: hsl($hue,87%,22%);
+$color2: hsl($hue,87%,22%);/*hsl(199,87%,22%)*/
 $color3: hsl(219, 18%, 60%);
 $color4: hsl(16, 63%, 59%);
 
@@ -8,4 +8,10 @@ $color4: hsl(16, 63%, 59%);
 @mixin line($w,$color){
 	border: $w $color solid;
 }
-
+@mixin accelerate{
+	-webkit-transform: translateZ(0);
+   -moz-transform: translateZ(0);
+   -ms-transform: translateZ(0);
+   -o-transform: translateZ(0);
+   transform: translateZ(0);
+}
