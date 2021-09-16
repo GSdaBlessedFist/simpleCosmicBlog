@@ -1,60 +1,62 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{dataset.homepage.title}}</title>
-	<link rel="stylesheet" href="./css/styles.css">
-	<script src="./js/gridwork.js" defer></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-	<script>
-		window.onload = ()=>{
-			document.getElementById("prime-container").style.gridTemplateColumns= "50% 25.9% .1% 25%";
-		}
-	</script>
-</head>
-<body>
-	<div class="prime-container" id="prime-container">
-		<div class="prime-container--section hero-column">
-			<img src="{{dataset.pictures.0.imgix_url}}" alt="artwork" class="hero-pic">
-			
-		</div>
-		<!-----------------TITLE SECTION----------------------->
-		<div class="prime-container--section title-column">
-			<div class="title-column_title-main">
-				<div>Welcome to the blog<br><span class="title-sub"> a simple CosmicJS powered blog</span></div>
-			</div>
-			<div class="title-column_image">
-				<a href="#" class="technically-button" id="technically-button">technically...</a>
-				<img style="background-image:url('{{dataset.pictures.2.imgix_url}}')" alt="" class="title-pic">
-			</div>
-		</div>
-		<!-----------------SKILLS SECTION----------------------->
-		<div class="prime-container--section skills-column" id="skills-column">
-			<div class="skills-column_image-container">
-				<img style="background-image:url('{{dataset.pictures.1.imgix_url}}')"  class="skills-pic">
-				<div class="skills-column_image-container--button-group">
-					<button class="github-button">github</button>
-					<button class="close-button">close technical stuff</button>
-			</div>
-			</div>
-			<div class="skills-column_skills-main">
-				<h2>skills used</h2>
-			</div>
-		</div>
-		<!-----------------POSTS SECTION----------------------->
-		<div class="prime-container--section posts-column">
-			{{#each dataset.posts}}
-				<a href="#" style="text-decoration: none;">
-					<div class="posts-column--post-container" data-post={{increment @index}}>
-						<div class="post-titlebar">
-							<div class="post-titlebar_title">{{title}}</div>
-						</div>
-						<div class="post-summary">{{metadata.summary}}</div>
-					</div>
-				</a>
-			{{/each}}
-		</div>
-	</div>
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>{{dataset.homepage.title}}</title>
+      <link rel="stylesheet" href="./css/styles.css">
+      <script src="./js/gridwork.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+      <script>
+         window.onload = ()=>{
+         	document.getElementById("prime-container").style.gridTemplateColumns= "50% 25.9% .1% 25%";
+         }
+      </script>
+   </head>
+   <body>
+      <div class="prime-container" id="prime-container">
+         <div class="prime-container--section hero-column">
+            <!-- <img src="{{dataset.pictures.0.imgix_url}}" alt="artwork" class="hero-pic"> -->
+         </div>
+         <!-----------------TITLE SECTION----------------------->
+         <div class="prime-container--section title-column">
+            <div class="title-column_title-main">
+               <div>Welcome to the blog<br><span class="title-sub"> a simple CosmicJS powered blog</span></div>
+            </div>
+            <div class="title-column_image">
+               <a href="#" class="technically-button" id="technically-button">technically...</a>
+               <img style="background-image:url('{{dataset.pictures.2.imgix_url}}')" alt="" class="title-pic">
+            </div>
+         </div>
+         <!-----------------SKILLS SECTION----------------------->
+         <div class="prime-container--section skills-column" id="skills-column">
+            <div class="skills-column_image-container">
+               <img style="background-image:url('{{dataset.pictures.1.imgix_url}}')"  class="skills-pic">
+               <div class="skills-column_image-container--button-container">
+                  <button class="github-button"  id="github-button">github</button>
+               </div>
+            </div>
+            <div class="skills-column_skills-main">
+               <h2>skills used</h2>
+               <button class="close-button">close technical stuff</button>
+            </div>
+         </div>
+         <!-----------------POSTS SECTION----------------------->
+         <div class="prime-container--section posts-column">
+            {{#each dataset.posts}}
+            <a href="#" style="text-decoration: none;">
+               <div class="posts-column--post-container" data-post={{increment @index}}>
+               <div class="post-titlebar">
+                  <div class="post-titlebar_title">{{title}}</div>
+               </div>
+               <div class="post-summary">{{metadata.summary}}</div>
+         		</div><!-- class="posts-column--post-container" -->
+	         </a>
+	         {{/each}}
+      </div>
+      </div>
+   </body>
 </html>
+

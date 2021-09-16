@@ -101,8 +101,9 @@
 /* line 98, ../../src/scss/grid.scss */
 .skills-column_image-container {
   grid-area: skillsImage;
+  width: 100%;
 }
-/* line 102, ../../src/scss/grid.scss */
+/* line 103, ../../src/scss/grid.scss */
 .skills-pic {
   display: block;
   width: 101%;
@@ -114,27 +115,41 @@
   background-repeat: no-repeat;
   border: 2px black solid;
 }
-/* line 114, ../../src/scss/grid.scss */
-.skills-column_image-container--button-group {
-  display: inline;
-  border: 2px blue solid;
+/* line 115, ../../src/scss/grid.scss */
+.skills-column_image-container--button-container {
+  display: block;
   position: relative;
-  top: -31px;
-  margin: 0px 25%;
+  float: center;
+  top: -70px;
+  margin: 15px 33%;
+  background: transparent;
 }
-/* line 126, ../../src/scss/grid.scss */
+/* line 123, ../../src/scss/grid.scss */
+.github-button {
+  width: 100%;
+  height: 40px;
+  letter-spacing: 1.5px;
+  font-family: 'Urbanist', sans-serif;
+  background: transparent;
+  transition: .65s all;
+}
+/* line 130, ../../src/scss/grid.scss */
+.github-button:hover {
+  background: #000;
+}
+/* line 138, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border-top: 1px white solid;
 }
 
-/* line 133, ../../src/scss/grid.scss */
+/* line 145, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 }
-/* line 137, ../../src/scss/grid.scss */
+/* line 149, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
   grid-template-rows: auto 1fr;
