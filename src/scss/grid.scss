@@ -10,7 +10,7 @@
 	&--section{
 		// @include line(2px,hsla(30,100%,100%,.45));
 	}
-	overflow-y:hidden;
+	overflow:hidden;
 }
 .hero-column{
 	grid-area: hero;
@@ -59,19 +59,30 @@
 	}
 	&_image{
 		grid-area: titleImage;
+		display: block;
 		width: 100%;
 		border: none;
-		// @include line(2px,hsla(30,100%,100%,.45));
+		background-color: none;
+		overflow: hidden;
 		@at-root{
+			.technically-button{
+				float: right;
+				text-decoration: none;
+				color: $color4;
+				margin: 10px;
+				margin-bottom: 0px;
+				@include font1;
+			}
 			.title-pic {
 			display: block;
-			width: 100%;
+			width: 101%;
 			height: 100%;
-			margin: 0;
-			padding: 0;
+			margin: 0px;
+			padding: 0px;
 			background-position: 25% 37%;
-			background-size: contain;
+			background-size: cover;
 			background-repeat: no-repeat;
+			border: 2px black solid;
 }
 		}
 	}
@@ -87,8 +98,25 @@
 	&_image-container{
 		grid-area: skillsImage;
 		// @include line(2px,hsla(30,100%,100%,.45));
+		@at-root{
+			.skills-pic{
+				display: block;
+				width: 101%;
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+				background-position: 25% 37%;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border: 2px black solid;
+			}
+		}
 		&--button-group{
-			@include line(2px,blue);
+			display: inline;
+			border: 2px blue solid;
+			position: relative;
+			top: -31px;
+			margin: 0px 25%;
 			@at-root{
 				.github-button{}
 				.close-button{}
@@ -97,7 +125,7 @@
 	}
 	&_skills-main{
 		grid-area: skillsContent;
-		@include line(2px,hsla(30,100%,100%,.45));
+		border-top:1px white solid;
 		&>h2{
 		}
 	}

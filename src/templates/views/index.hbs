@@ -6,9 +6,15 @@
 	<title>{{dataset.homepage.title}}</title>
 	<link rel="stylesheet" href="./css/styles.css">
 	<script src="./js/gridwork.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<script>
+		window.onload = ()=>{
+			document.getElementById("prime-container").style.gridTemplateColumns= "50% 25.9% .1% 25%";
+		}
+	</script>
 </head>
 <body>
-	<div class="prime-container">
+	<div class="prime-container" id="prime-container">
 		<div class="prime-container--section hero-column">
 			<img src="{{dataset.pictures.0.imgix_url}}" alt="artwork" class="hero-pic">
 			
@@ -19,12 +25,14 @@
 				<div>Welcome to the blog<br><span class="title-sub"> a simple CosmicJS powered blog</span></div>
 			</div>
 			<div class="title-column_image">
+				<a href="#" class="technically-button" id="technically-button">technically...</a>
 				<img style="background-image:url('{{dataset.pictures.2.imgix_url}}')" alt="" class="title-pic">
 			</div>
 		</div>
 		<!-----------------SKILLS SECTION----------------------->
-		<div class="prime-container--section skills-column">
-			<div class="skills-column_image-container">skills picture
+		<div class="prime-container--section skills-column" id="skills-column">
+			<div class="skills-column_image-container">
+				<img style="background-image:url('{{dataset.pictures.1.imgix_url}}')"  class="skills-pic">
 				<div class="skills-column_image-container--button-group">
 					<button class="github-button">github</button>
 					<button class="close-button">close technical stuff</button>

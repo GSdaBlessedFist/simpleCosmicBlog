@@ -7,7 +7,7 @@
   grid-template-areas: "hero title skills sect4";
   width: 100%;
   height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 /* line 15, ../../src/scss/grid.scss */
@@ -60,22 +60,36 @@
 /* line 60, ../../src/scss/grid.scss */
 .title-column_image {
   grid-area: titleImage;
-  width: 100%;
-  border: none;
-}
-/* line 66, ../../src/scss/grid.scss */
-.title-pic {
   display: block;
   width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  background-position: 25% 37%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  border: none;
+  background-color: none;
+  overflow: hidden;
+}
+/* line 68, ../../src/scss/grid.scss */
+.technically-button {
+  float: right;
+  text-decoration: none;
+  color: #d87855;
+  margin: 10px;
+  margin-bottom: 0px;
+  font-family: 'Urbanist', sans-serif;
 }
 
-/* line 79, ../../src/scss/grid.scss */
+/* line 76, ../../src/scss/grid.scss */
+.title-pic {
+  display: block;
+  width: 101%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-position: 25% 37%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px black solid;
+}
+
+/* line 90, ../../src/scss/grid.scss */
 .skills-column {
   grid-area: skills;
   display: grid;
@@ -84,27 +98,43 @@
   grid-template-areas: "skillsImage" "skillsContent";
   opacity: 0;
 }
-/* line 87, ../../src/scss/grid.scss */
+/* line 98, ../../src/scss/grid.scss */
 .skills-column_image-container {
   grid-area: skillsImage;
 }
-/* line 90, ../../src/scss/grid.scss */
-.skills-column_image-container--button-group {
-  border: 2px blue solid;
+/* line 102, ../../src/scss/grid.scss */
+.skills-pic {
+  display: block;
+  width: 101%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-position: 25% 37%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px black solid;
 }
-/* line 98, ../../src/scss/grid.scss */
+/* line 114, ../../src/scss/grid.scss */
+.skills-column_image-container--button-group {
+  display: inline;
+  border: 2px blue solid;
+  position: relative;
+  top: -31px;
+  margin: 0px 25%;
+}
+/* line 126, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
-  border: 2px rgba(255, 255, 255, 0.45) solid;
+  border-top: 1px white solid;
 }
 
-/* line 105, ../../src/scss/grid.scss */
+/* line 133, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
 }
-/* line 109, ../../src/scss/grid.scss */
+/* line 137, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
   grid-template-rows: auto 1fr;
