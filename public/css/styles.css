@@ -4,7 +4,7 @@
 /* line 3, ../../src/scss/grid.scss */
 .prime-container {
   display: grid;
-  grid-template-columns: 50% 25% 0% 25%;
+  grid-template-columns: 45% 30% 0% 25%;
   grid-template-areas: "hero title skills sect4";
   width: 100%;
   height: 100vh;
@@ -213,18 +213,26 @@
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);
 }
 
+/* line 4, ../../src/scss/tabs.scss */
+.tabs-group {
+  width: 50%;
+  height: 50px;
+  border: 2px red solid;
+}
+
 /* line 4, ../../src/scss/posts.scss */
 .post-titlebar {
   grid-area: posttitle;
   display: block;
   width: 100%;
+  padding-bottom: 5px;
   overflow: hidden;
   font-family: 'Urbanist', sans-serif;
   font-weight: 900;
   background: #074a69;
   border-bottom: 1.5px solid #074a69;
 }
-/* line 14, ../../src/scss/posts.scss */
+/* line 15, ../../src/scss/posts.scss */
 .post-titlebar_title {
   grid-area: articleTitle;
   width: 100%;
@@ -233,10 +241,10 @@
   padding-bottom: 0;
   font-size: 1.5rem;
   color: white;
-  /*background: $color2;*/
+  background: #074a69;
 }
 
-/* line 26, ../../src/scss/posts.scss */
+/* line 27, ../../src/scss/posts.scss */
 .post-summary {
   grid-area: postsummary;
   display: block;
@@ -247,19 +255,28 @@
   color: white;
 }
 
-/* line 36, ../../src/scss/posts.scss */
+/* line 37, ../../src/scss/posts.scss */
 .article-container {
   display: none;
-  margin: 30px;
-  border: 1px red solid;
+  margin: 10% 5%;
+  width: 90%;
+  height: 90%;
+  color: #d87855;
+  overflow-y: auto;
 }
 
-/* line 41, ../../src/scss/posts.scss */
+/* line 45, ../../src/scss/posts.scss */
 .article-title {
   color: #d87855;
+  text-align: center;
 }
 
-/* line 5, ../../src/scss/styles.scss */
+/* line 49, ../../src/scss/posts.scss */
+.article-words {
+  color: #2a1209;
+}
+
+/* line 6, ../../src/scss/styles.scss */
 * {
   margin: 0px;
   padding: 0px;

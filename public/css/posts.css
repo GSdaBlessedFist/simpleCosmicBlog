@@ -6,13 +6,14 @@
   grid-area: posttitle;
   display: block;
   width: 100%;
+  padding-bottom: 5px;
   overflow: hidden;
   font-family: 'Urbanist', sans-serif;
   font-weight: 900;
   background: #074a69;
   border-bottom: 1.5px solid #074a69;
 }
-/* line 14, ../../src/scss/posts.scss */
+/* line 15, ../../src/scss/posts.scss */
 .post-titlebar_title {
   grid-area: articleTitle;
   width: 100%;
@@ -21,10 +22,10 @@
   padding-bottom: 0;
   font-size: 1.5rem;
   color: white;
-  /*background: $color2;*/
+  background: #074a69;
 }
 
-/* line 26, ../../src/scss/posts.scss */
+/* line 27, ../../src/scss/posts.scss */
 .post-summary {
   grid-area: postsummary;
   display: block;
@@ -35,14 +36,23 @@
   color: white;
 }
 
-/* line 36, ../../src/scss/posts.scss */
+/* line 37, ../../src/scss/posts.scss */
 .article-container {
   display: none;
-  margin: 30px;
-  border: 1px red solid;
+  margin: 10% 5%;
+  width: 90%;
+  height: 90%;
+  color: #d87855;
+  overflow-y: auto;
 }
 
-/* line 41, ../../src/scss/posts.scss */
+/* line 45, ../../src/scss/posts.scss */
 .article-title {
   color: #d87855;
+  text-align: center;
+}
+
+/* line 49, ../../src/scss/posts.scss */
+.article-words {
+  color: #2a1209;
 }

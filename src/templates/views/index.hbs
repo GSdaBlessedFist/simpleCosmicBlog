@@ -11,7 +11,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
       <script>
          window.onload = ()=>{
-         	document.getElementById("prime-container").style.gridTemplateColumns= "50% 25.9% .1% 25%";
+         	document.getElementById("prime-container").style.gridTemplateColumns= "45% 30% 0% 25%";
+            document.getElementById("title-column").style.gridTemplateRows= "55% 45%";
          }
          
       </script>
@@ -20,9 +21,14 @@
       <div class="prime-container" id="prime-container">
          <div class="prime-container--section hero-column">
             <img src="{{dataset.pictures.0.imgix_url}}" alt="artwork" class="hero-pic">
+            <!-- <div class="tabs-group">
+               <div class="tabs-group_other-works"></div>
+               <div class="tabs-group_resume"></div>
+               <div class="tabs-group_contact"></div>
+            </div> -->
          </div>
          <!-----------------TITLE SECTION----------------------->
-         <div class="prime-container--section title-column">
+         <div class="prime-container--section title-column" id="title-column">
             <div class="title-column_title-main">
                <div>Welcome to the blog<br><span class="title-sub"> a simple CosmicJS powered blog</span></div>
             </div>
@@ -67,4 +73,3 @@
 </html>
 
 
-Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae labore sunt veniam dolore totam quos quia sapiente aperiam explicabo doloribus consequuntur, unde fugit cumque a repudiandae impedit magni quam accusamus odit, dolores. Quae excepturi dolorem dolorum voluptates quos impedit asperiores, cupiditate, suscipit laudantium? Nam quidem libero placeat voluptate, repudiandae quasi laborum rerum ab nesciunt illo veritatis eos ad exercitationem ea asperiores, aperiam dicta illum vero necessitatibus aut provident quibusdam dolores dolore! Reiciendis eligendi sint dolore, consequatur ab cumque earum necessitatibus corrupti inventore illum aperiam rerum minima quisquam esse numquam accusantium magni culpa dolorem cum ullam ducimus! Nesciunt molestias, vero inventore!

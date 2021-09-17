@@ -1,0 +1,9 @@
+/*hsl(199,87%,22%)*/
+/*MIXINs*/
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+/* line 4, ../../src/scss/tabs.scss */
+.tabs-group {
+  width: 50%;
+  height: 50px;
+  border: 2px red solid;
+}

@@ -1,0 +1,8 @@
+@import "variables";
+@import "fonts";
+
+.tabs-group{
+	width: 50%;
+	height: 50px;
+	@include line(2px,red);
+}

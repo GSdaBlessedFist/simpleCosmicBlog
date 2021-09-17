@@ -2,6 +2,7 @@
 const p = console.log;
 const technicallyButton= document.getElementById("technically-button");
 const primeContainerGrid= document.getElementById("prime-container");
+const titleColumn= document.getElementById("title-column");
 const titleImageSection= document.getElementById("title-column_image-section");
 const titlePic= document.getElementById("title-pic");
 const skillsColumn= document.getElementById("skills-column");
@@ -9,9 +10,8 @@ const githubButton= document.getElementById("github-button");
 const closeButton= document.getElementById("close-button");
 const posts = document.getElementsByClassName("posts-column--post-container");
 const articleContainer= document.getElementById("article-container");
-
 const gridColumnsConfigs = {
-	"close": "50% 25% 0% 25%",
+	"close": "45% 30% 0% 25%",
 	"open": "25% 30% 20% 25%"
 }
 document.addEventListener('click',(e)=>{
@@ -28,30 +28,34 @@ document.addEventListener('click',(e)=>{
 	if(e.target==githubButton){
 		window.open("https://github.com/GSdaBlessedFist/Simple-Cosmic-blog","_blank");
 	}
-
 })
 const selected ="2px hsl(16, 63%, 59%) solid";
-
+var articleDisplayed = false;
+var selectedPost = null;
 function sendArticleToTitlePicSection(post){
-	titleImageSection.removeChild(titlePic);
+	titlePic.style.display="none";
 	articleContainer.style.display= "block";
 	const body = post.querySelector(".post-summary").dataset.fullarticle;
 	articleContainer.innerHTML+=`
 		<h1 class="article-title">${post.querySelector(".post-titlebar_title").innerHTML}</h1>
-		<p>${body}</p>
+		<div style="text-indent: 20px;">
+			<p class="article-words">${body}</p>
+		</div>
 	`;
+	articleDisplayed=true;
+	selectedPost= document.querySelector(".article-title").innerText;
 }
-
+function adjustTitleColumnDivisions(){
+	gsap.to(titleColumn,{duration:.35,gridTemplateRows:"20% 80%"});
+}
 Array.from(posts).forEach((post)=>{
 	post.addEventListener('click',(e)=>{
-		if(articleContainer.style.display=="block"){
-			titleImageSection.removeChild(articleContainer);
-		}else{
-			
+		adjustTitleColumnDivisions();
+		if(articleDisplayed){
+			articleContainer.innerHTML=``;
 		}
 		gsap.set(post,{border:selected});
 		gsap.set(post.querySelector(".post-titlebar_title"),{color:"hsl(16, 63%, 59%)"});
-		
-		sendArticleToTitlePicSection(post)
+		sendArticleToTitlePicSection(post);
 	})
 })
