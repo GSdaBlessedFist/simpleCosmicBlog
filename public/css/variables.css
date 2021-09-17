@@ -1,2 +1,9 @@
 /*hsl(199,87%,22%)*/
 /*MIXINs*/
+/* line 18, ../../src/scss/variables.scss */
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

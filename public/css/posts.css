@@ -1,6 +1,14 @@
 /*hsl(199,87%,22%)*/
 /*MIXINs*/
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+/* line 18, ../../src/scss/variables.scss */
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* line 4, ../../src/scss/posts.scss */
 .post-titlebar {
   grid-area: posttitle;

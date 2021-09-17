@@ -11,7 +11,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
       <script>
          window.onload = ()=>{
-         	document.getElementById("prime-container").style.gridTemplateColumns= "45% 30% 0% 25%";
+         	document.getElementById("prime-container").style.gridTemplateColumns= "40% 35% 0% 25%";
             document.getElementById("title-column").style.gridTemplateRows= "55% 45%";
          }
          
@@ -20,12 +20,13 @@
    <body>
       <div class="prime-container" id="prime-container">
          <div class="prime-container--section hero-column">
-            <img src="{{dataset.pictures.0.imgix_url}}" alt="artwork" class="hero-pic">
-            <!-- <div class="tabs-group">
-               <div class="tabs-group_other-works"></div>
-               <div class="tabs-group_resume"></div>
-               <div class="tabs-group_contact"></div>
-            </div> -->
+            <img src="{{dataset.pictures.0.imgix_url}}" class="hero-pic">
+            <div class="tabs-group">
+               <div class="tabs-group_contact">contact</div>
+               <div class="tabs-group_resume">resume</div>
+               <div class="tabs-group_other-works">other works</div>
+            </div>
+            <div class="hero-section-text-container" id="hero-section-text-container">resume</div>
          </div>
          <!-----------------TITLE SECTION----------------------->
          <div class="prime-container--section title-column" id="title-column">

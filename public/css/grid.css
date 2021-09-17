@@ -1,6 +1,14 @@
 /*hsl(199,87%,22%)*/
 /*MIXINs*/
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+/* line 18, ../../src/scss/variables.scss */
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* line 3, ../../src/scss/grid.scss */
 .prime-container {
   display: grid;
@@ -14,8 +22,11 @@
 /* line 14, ../../src/scss/grid.scss */
 .hero-column {
   grid-area: hero;
+  display: flex;
+  justify-content: center;
+  position: relative;
 }
-/* line 17, ../../src/scss/grid.scss */
+/* line 21, ../../src/scss/grid.scss */
 .hero-pic {
   display: block;
   width: 100%;
@@ -29,7 +40,7 @@
   backdrop-filter: saturate(180%) blur(10px);
 }
 
-/* line 27, ../../src/scss/grid.scss */
+/* line 31, ../../src/scss/grid.scss */
 .title-column {
   grid-area: title;
   display: grid;
@@ -38,7 +49,7 @@
   grid-template-rows: 55% 45%;
   grid-template-areas: "titleContent" "titleImage";
 }
-/* line 35, ../../src/scss/grid.scss */
+/* line 39, ../../src/scss/grid.scss */
 .title-column_title-main {
   grid-area: titleContent;
   display: flex;
@@ -48,24 +59,32 @@
   background: #074a69;
   position: relative;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   line-height: 25px;
   padding: 20px 40px;
   font-family: 'Urbanist', sans-serif;
   text-shadow: 0px 2px 5px black;
   border: 5px black solid;
 }
-/* line 49, ../../src/scss/grid.scss */
+/* line 55, ../../src/scss/grid.scss */
 .title-column_title-main > div {
   background: transparent;
   font-size: 2rem;
 }
-/* line 55, ../../src/scss/grid.scss */
+/* line 61, ../../src/scss/grid.scss */
 .title-sub {
   background: inherit;
   font-size: 1.25rem;
-  color: rgba(255, 255, 255, 0.65);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3e9fcc;
 }
-/* line 62, ../../src/scss/grid.scss */
+/* line 69, ../../src/scss/grid.scss */
 .title-column_image {
   grid-area: titleImage;
   display: block;
@@ -74,7 +93,7 @@
   background-color: none;
   overflow: hidden;
 }
-/* line 70, ../../src/scss/grid.scss */
+/* line 77, ../../src/scss/grid.scss */
 .technically-button {
   float: right;
   text-decoration: none;
@@ -84,7 +103,7 @@
   font-family: 'Urbanist', sans-serif;
 }
 
-/* line 78, ../../src/scss/grid.scss */
+/* line 85, ../../src/scss/grid.scss */
 .title-pic {
   display: inline;
   position: relative;
@@ -98,7 +117,7 @@
   border: 5px black solid;
 }
 
-/* line 93, ../../src/scss/grid.scss */
+/* line 100, ../../src/scss/grid.scss */
 .skills-column {
   grid-area: skills;
   display: grid;
@@ -108,12 +127,12 @@
   opacity: 0;
   border-right: 2px #d87855 solid;
 }
-/* line 102, ../../src/scss/grid.scss */
+/* line 109, ../../src/scss/grid.scss */
 .skills-column_image-container {
   grid-area: skillsImage;
   width: 100%;
 }
-/* line 106, ../../src/scss/grid.scss */
+/* line 113, ../../src/scss/grid.scss */
 .skills-pic {
   display: block;
   width: 101%;
@@ -124,7 +143,7 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* line 118, ../../src/scss/grid.scss */
+/* line 125, ../../src/scss/grid.scss */
 .skills-column_image-container--button-container {
   display: block;
   width: 130px;
@@ -134,7 +153,7 @@
   margin: 0 33%;
   background: transparent;
 }
-/* line 127, ../../src/scss/grid.scss */
+/* line 134, ../../src/scss/grid.scss */
 .github-button {
   width: 100%;
   height: 40px;
@@ -143,17 +162,17 @@
   background: transparent;
   transition: .65s all;
 }
-/* line 134, ../../src/scss/grid.scss */
+/* line 141, ../../src/scss/grid.scss */
 .github-button:hover {
   background: #000;
 }
-/* line 141, ../../src/scss/grid.scss */
+/* line 148, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border-top: 1px white solid;
   font-family: 'Urbanist', sans-serif;
 }
-/* line 146, ../../src/scss/grid.scss */
+/* line 153, ../../src/scss/grid.scss */
 .close-button {
   display: inline;
   position: relative;
@@ -169,13 +188,13 @@
   border-radius: 20px;
   transition: .65s all;
 }
-/* line 161, ../../src/scss/grid.scss */
+/* line 168, ../../src/scss/grid.scss */
 .close-button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 166, ../../src/scss/grid.scss */
+/* line 173, ../../src/scss/grid.scss */
 .skills-title {
   display: block;
   width: 100%;
@@ -184,31 +203,31 @@
   padding: 15px 0px;
 }
 
-/* line 173, ../../src/scss/grid.scss */
+/* line 180, ../../src/scss/grid.scss */
 .skills-body {
   padding: 0 20px;
 }
 
-/* line 176, ../../src/scss/grid.scss */
+/* line 183, ../../src/scss/grid.scss */
 .orange-span {
   color: #d87855;
   font-size: 1rem;
 }
 
-/* line 180, ../../src/scss/grid.scss */
+/* line 187, ../../src/scss/grid.scss */
 .mainColor-span {
   color: #8793ab;
   font-size: 1.25rem;
 }
 
-/* line 187, ../../src/scss/grid.scss */
+/* line 194, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
 }
-/* line 197, ../../src/scss/grid.scss */
+/* line 204, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -219,7 +238,7 @@
   /*@include line(2px,black);*/
   transition: .35s all;
 }
-/* line 207, ../../src/scss/grid.scss */
+/* line 214, ../../src/scss/grid.scss */
 .posts-column--post-container:hover {
   border: 1px #d87855 solid;
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);

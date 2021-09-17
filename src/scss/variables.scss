@@ -15,3 +15,15 @@ $color4: hsl(16, 63%, 59%);
    -o-transform: translateZ(0);
    transform: translateZ(0);
 }
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+@mixin disableSelect{
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}

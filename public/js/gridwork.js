@@ -11,7 +11,7 @@ const closeButton= document.getElementById("close-button");
 const posts = document.getElementsByClassName("posts-column--post-container");
 const articleContainer= document.getElementById("article-container");
 const gridColumnsConfigs = {
-	"close": "45% 30% 0% 25%",
+	"close": "40% 35% 0% 25%",
 	"open": "25% 30% 20% 25%"
 }
 document.addEventListener('click',(e)=>{

@@ -13,6 +13,10 @@
 }
 .hero-column{
 	grid-area: hero;
+	display: flex;
+	justify-content: center;
+	
+	position: relative;
 	@at-root{
 		.hero-pic{
 			display: block;
@@ -41,9 +45,11 @@
 		background: $color2;
 		position: relative;
 		text-align: center;
+		@include disableSelect;
 		line-height: 25px;
 		padding: 20px 40px;
 		@include font1;
+
 		text-shadow: 0px 2px 5px darken($color2,25%);
 		@include line(5px,black);
 		&>div{
@@ -55,7 +61,8 @@
 			.title-sub{
 				background: inherit;
 				font-size: 1.25rem;
-				color: rgba(255,255,255,.65);
+				@include disableSelect;
+				color: hsl(199, 58%, 52%);
 			}
 		}
 	}

@@ -1,9 +1,70 @@
 /*hsl(199,87%,22%)*/
 /*MIXINs*/
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@500&display=swap");
+/* line 18, ../../src/scss/variables.scss */
+.disable-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 /* line 4, ../../src/scss/tabs.scss */
 .tabs-group {
-  width: 50%;
-  height: 50px;
-  border: 2px red solid;
+  display: flex;
+  position: absolute;
+  right: -2px;
+  width: 40px;
+  height: 300px;
+  top: 185px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotateZ(180deg);
+  background: transparent;
+}
+/* line 14, ../../src/scss/tabs.scss */
+.tabs-group > div {
+  display: flex;
+  flex-direction: reverse-row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  background: rgba(216, 120, 85, 0.35);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: .55s all;
+}
+/* line 23, ../../src/scss/tabs.scss */
+.tabs-group > div:hover {
+  background: rgba(216, 120, 85, 0.65);
+}
+/* line 27, ../../src/scss/tabs.scss */
+.tabs-group_other-works {
+  border: 1px #074a69 solid;
+  line-height: 12px;
+  border-bottom-right-radius: 25px;
+  font-family: 'Urbanist', sans-serif;
+}
+/* line 33, ../../src/scss/tabs.scss */
+.tabs-group_resume {
+  border: 1px #074a69 solid;
+  font-family: 'Urbanist', sans-serif;
+}
+/* line 37, ../../src/scss/tabs.scss */
+.tabs-group_contact {
+  border: 1px #074a69 solid;
+  border-top-right-radius: 25px;
+  font-family: 'Urbanist', sans-serif;
+}
+
+/* line 43, ../../src/scss/tabs.scss */
+.hero-section-text-container {
+  width: 80%;
+  height: 75%;
+  position: absolute;
+  border: 1px white solid;
+  color: white;
+  top: 100px;
 }

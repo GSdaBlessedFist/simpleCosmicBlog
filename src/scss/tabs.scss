@@ -2,7 +2,49 @@
 @import "fonts";
 
 .tabs-group{
-	width: 50%;
-	height: 50px;
-	@include line(2px,red);
+	display: flex;
+	position: absolute;
+	right: -2px;
+	width: 40px;
+	height: 300px;
+	top: 185px;
+	writing-mode: vertical-rl;
+	text-orientation: mixed;transform: rotateZ(180deg);
+	background: transparent;
+	&>div{
+		display: flex;
+		flex-direction: reverse-row;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 10px;
+		background: hsla(16, 63%, 59%,.35);
+		@include disableSelect;
+		transition: .55s all;
+		&:hover{
+			background: hsla(16, 63%, 59%,.65);
+		}
+	}
+	&_other-works{
+		@include line(1px,$color2);
+		line-height: 12px;
+		border-bottom-right-radius: 25px;
+		@include font1;
+	}
+	&_resume{
+		@include line(1px,$color2);
+		@include font1;
+	}
+	&_contact{
+		@include line(1px,$color2);
+		border-top-right-radius: 25px;
+		@include font1;
+	}
+}
+.hero-section-text-container{
+	width: 80%;
+	height: 75%;
+	position: absolute;
+	border: 1px white solid;
+	color: white;
+	top: 100px;
 }
