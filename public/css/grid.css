@@ -180,23 +180,35 @@
   display: block;
   width: 100%;
   text-align: center;
-  color: #0c7cb0;
+  color: #d87855;
   padding: 15px 0px;
 }
 
 /* line 173, ../../src/scss/grid.scss */
 .skills-body {
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
-/* line 179, ../../src/scss/grid.scss */
+/* line 176, ../../src/scss/grid.scss */
+.orange-span {
+  color: #d87855;
+  font-size: 1rem;
+}
+
+/* line 180, ../../src/scss/grid.scss */
+.mainColor-span {
+  color: #8793ab;
+  font-size: 1.25rem;
+}
+
+/* line 187, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
 }
-/* line 189, ../../src/scss/grid.scss */
+/* line 197, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
   grid-template-rows: auto 1fr;
@@ -207,7 +219,7 @@
   /*@include line(2px,black);*/
   transition: .35s all;
 }
-/* line 199, ../../src/scss/grid.scss */
+/* line 207, ../../src/scss/grid.scss */
 .posts-column--post-container:hover {
   border: 1px #d87855 solid;
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);

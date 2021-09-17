@@ -18,11 +18,11 @@ document.addEventListener('click',(e)=>{
 	e.preventDefault();
 	if(e.target==technicallyButton){
 		gsap.to(primeContainerGrid,{duration:.95,gridTemplateColumns:gridColumnsConfigs.open,ease: "elastic.out(1, 0.7)"});
-		gsap.to(skillsColumn,{duration:.65,opacity:1,delay:.45});
+		gsap.to(skillsColumn,{duration:.55,opacity:1,delay:.40});
 	}
 	if(e.target==closeButton){
 		console.log(gridColumnsConfigs.close)
-		gsap.to(skillsColumn,{duration:.15,opacity:0});
+		gsap.to(skillsColumn,{duration:.10,opacity:0});
 		gsap.to(primeContainerGrid,{duration:.65,gridTemplateColumns:gridColumnsConfigs.close,ease:" power2.out"});
 	}
 	if(e.target==githubButton){
