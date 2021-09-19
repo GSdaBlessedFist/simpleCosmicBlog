@@ -8,6 +8,7 @@
       <title>{{dataset.homepage.title}}</title>
       <link rel="stylesheet" href="./css/styles.css">
       <script src="./js/gridwork.js" defer></script>
+      <script src="./js/tabs.js" defer></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
       <script>
          window.onload = ()=>{
@@ -22,11 +23,11 @@
          <div class="prime-container--section hero-column">
             <img src="{{dataset.pictures.0.imgix_url}}" class="hero-pic">
             <div class="tabs-group">
-               <div class="tabs-group_contact">contact</div>
-               <div class="tabs-group_resume">resume</div>
-               <div class="tabs-group_other-works">other works</div>
+               <div class="tabs-group_contact" id="contact">contact</div>
+               <div class="tabs-group_aboutme" id="aboutme">about me</div>
+               <div class="tabs-group_other-works" id="other-works">other works</div>
             </div>
-            <div class="hero-section-text-container" id="hero-section-text-container">resume</div>
+            <div class="hero-section-text-container" id="hero-section-text-container"></div>
          </div>
          <!-----------------TITLE SECTION----------------------->
          <div class="prime-container--section title-column" id="title-column">
@@ -85,7 +86,18 @@
 	         {{/each}}
       </div>
       </div>
+      {{#each dataset.links}}
+
+         <div class="invisibleData" 
+            data-linktitle='{{removeHTML title}}'
+            data-url='{{removeHTML content}}'
+            data-description='{{metadata.description}}'
+            >
+         </div>
+      {{/each}}
+      <div class="invisibleData" id="aboutMeInfo"
+         data-aboutmecontent='{{removeHTML dataset.aboutMe.content}}'
+      ></div>
    </body>
 </html>
-
 

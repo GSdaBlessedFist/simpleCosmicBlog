@@ -244,7 +244,7 @@
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);
 }
 
-/* line 4, ../../src/scss/tabs.scss */
+/* line 3, ../../src/scss/tabs.scss */
 .tabs-group {
   display: flex;
   position: absolute;
@@ -257,7 +257,7 @@
   transform: rotateZ(180deg);
   background: transparent;
 }
-/* line 14, ../../src/scss/tabs.scss */
+/* line 13, ../../src/scss/tabs.scss */
 .tabs-group > div {
   display: flex;
   flex-direction: reverse-row;
@@ -271,37 +271,150 @@
   user-select: none;
   transition: .55s all;
 }
-/* line 23, ../../src/scss/tabs.scss */
+/* line 22, ../../src/scss/tabs.scss */
 .tabs-group > div:hover {
   background: rgba(216, 120, 85, 0.65);
 }
-/* line 27, ../../src/scss/tabs.scss */
+/* line 26, ../../src/scss/tabs.scss */
 .tabs-group_other-works {
   border: 1px #074a69 solid;
   line-height: 12px;
   border-bottom-right-radius: 25px;
   font-family: 'Urbanist', sans-serif;
 }
-/* line 33, ../../src/scss/tabs.scss */
-.tabs-group_resume {
+/* line 32, ../../src/scss/tabs.scss */
+.tabs-group_aboutme {
+  line-height: 11px;
+  text-align: center;
   border: 1px #074a69 solid;
   font-family: 'Urbanist', sans-serif;
+  background: transparent;
 }
-/* line 37, ../../src/scss/tabs.scss */
+/* line 38, ../../src/scss/tabs.scss */
+.tabs-group_aboutme > p {
+  background: transparent;
+}
+/* line 42, ../../src/scss/tabs.scss */
 .tabs-group_contact {
   border: 1px #074a69 solid;
   border-top-right-radius: 25px;
   font-family: 'Urbanist', sans-serif;
 }
 
-/* line 43, ../../src/scss/tabs.scss */
+/* line 48, ../../src/scss/tabs.scss */
 .hero-section-text-container {
+  display: none;
+  opacity: 0;
   width: 80%;
   height: 75%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   border: 1px white solid;
   color: white;
   top: 100px;
+}
+
+/* line 61, ../../src/scss/tabs.scss */
+.otherWorks {
+  display: block;
+  width: 90%;
+  height: 90%;
+  color: #d87855;
+  padding: 20px 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* line 72, ../../src/scss/tabs.scss */
+.otherWorks--linkContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 100px;
+  color: #d87855;
+  background: transparent;
+  padding: 5px auto;
+  border-bottom: 1px rgba(0, 0, 0, 0.75) solid;
+}
+/* line 82, ../../src/scss/tabs.scss */
+.otherWorks--linkContainer_title {
+  text-align: center;
+  background: transparent;
+  padding: 13px;
+  line-height: 15px;
+}
+/* line 88, ../../src/scss/tabs.scss */
+.otherWorks--linkContainer_url {
+  position: relative;
+  top: -5px;
+  text-decoration: none;
+  text-align: center;
+  font-size: .85rem;
+  color: #ebbaa8;
+  background: transparent;
+  padding: 15px auto;
+}
+
+/* line 103, ../../src/scss/tabs.scss */
+h2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 107, ../../src/scss/tabs.scss */
+.aboutMe {
+  display: block;
+  width: 90%;
+  height: 90%;
+  font-family: 'Urbanist', sans-serif;
+  padding: 15px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.5);
+  text-indent: 20px;
+}
+/* line 117, ../../src/scss/tabs.scss */
+.aboutMe > p {
+  background: transparent;
+}
+
+/* line 123, ../../src/scss/tabs.scss */
+.tabsArea-close-button {
+  font-family: 'Urbanist', sans-serif;
+  display: none;
+  position: relative;
+  top: 8px;
+  left: 44%;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  font-size: 1.2rem;
+  color: #642b17;
+  text-decoration: none;
+  padding: 6px 10px;
+  border: 2px #642b17 solid;
+  border-radius: 25px;
+  transition: .65s all;
+}
+/* line 143, ../../src/scss/tabs.scss */
+.tabsArea-close-button:hover {
+  color: #d87855;
+  border: 2px #d87855 solid;
+}
+
+/* line 149, ../../src/scss/tabs.scss */
+.orange-span {
+  color: #d87855;
+  font-size: 1.05rem;
+  background: transparent;
 }
 
 /* line 4, ../../src/scss/posts.scss */

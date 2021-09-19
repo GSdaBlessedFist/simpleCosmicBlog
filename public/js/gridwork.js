@@ -28,6 +28,11 @@ document.addEventListener('click',(e)=>{
 	if(e.target==githubButton){
 		window.open("https://github.com/GSdaBlessedFist/Simple-Cosmic-blog","_blank");
 	}
+	if(e.target.matches('.otherWorks--linkContainer_url')){
+		let url = e.target
+		p("url")
+		window.open(url)
+	}
 })
 const selected ="2px hsl(16, 63%, 59%) solid";
 var articleDisplayed = false;
