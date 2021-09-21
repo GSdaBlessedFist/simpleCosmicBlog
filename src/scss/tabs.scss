@@ -20,7 +20,7 @@
 		@include disableSelect;
 		transition: .55s all;
 		&:hover{
-			background: hsla(16, 63%, 59%,.65);
+			background: hsla(16, 63%, 59%,.85);
 		}
 	}
 	&_other-works{
@@ -34,16 +34,17 @@
 		text-align: center;
 		@include line(1px,$color2);
 		@include font1;
+		border-top-right-radius: 25px;
 		background: transparent;
 		&>p{
 			background: transparent;
 		}
 	}
-	&_contact{
-		@include line(1px,$color2);
-		border-top-right-radius: 25px;
-		@include font1;
-	}
+	// &_contact{
+	// 	@include line(1px,$color2);
+	// 	border-top-right-radius: 25px;
+	// 	@include font1;
+	// }
 }
 .hero-section-text-container{
 	display: none;
@@ -119,15 +120,15 @@ h2{
 	}
 }
 
-
-.tabsArea-close-button{
+.tabsArea-close-container{
+	width: 100%;
+	&_button{
 	@include font1;
 	$d: 25px;
-	// display: flex;
-	display: none;
+	display: flex;
 	position: relative;
 	top: 8px;
-	left: 44%;
+	left: 92%;
 	justify-content: center;
 	align-items: center;
 	width: $d ;
@@ -145,6 +146,9 @@ h2{
 		border: 2px $color4 solid;
 	}
 }
+}
+
+
 
 .orange-span{
 	color: $color4;

@@ -30,8 +30,7 @@
 .hero-pic {
   display: block;
   width: 100%;
-  object-fit: cover;
-  height: 100vh;
+  background-size: cover;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -108,9 +107,9 @@
   display: inline;
   position: relative;
   width: 101%;
-  height: 101%;
-  margin: 0px;
-  padding: 0px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
   background-position: 25% 0%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -127,12 +126,12 @@
   opacity: 0;
   border-right: 2px #d87855 solid;
 }
-/* line 109, ../../src/scss/grid.scss */
+/* line 110, ../../src/scss/grid.scss */
 .skills-column_image-container {
   grid-area: skillsImage;
   width: 100%;
 }
-/* line 113, ../../src/scss/grid.scss */
+/* line 114, ../../src/scss/grid.scss */
 .skills-pic {
   display: block;
   width: 101%;
@@ -143,7 +142,7 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* line 125, ../../src/scss/grid.scss */
+/* line 126, ../../src/scss/grid.scss */
 .skills-column_image-container--button-container {
   display: block;
   width: 130px;
@@ -153,7 +152,7 @@
   margin: 0 33%;
   background: transparent;
 }
-/* line 134, ../../src/scss/grid.scss */
+/* line 135, ../../src/scss/grid.scss */
 .github-button {
   width: 100%;
   height: 40px;
@@ -162,17 +161,17 @@
   background: transparent;
   transition: .65s all;
 }
-/* line 141, ../../src/scss/grid.scss */
+/* line 142, ../../src/scss/grid.scss */
 .github-button:hover {
   background: #000;
 }
-/* line 148, ../../src/scss/grid.scss */
+/* line 149, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border-top: 1px white solid;
   font-family: 'Urbanist', sans-serif;
 }
-/* line 153, ../../src/scss/grid.scss */
+/* line 154, ../../src/scss/grid.scss */
 .close-button {
   display: inline;
   position: relative;
@@ -188,13 +187,13 @@
   border-radius: 20px;
   transition: .65s all;
 }
-/* line 168, ../../src/scss/grid.scss */
+/* line 169, ../../src/scss/grid.scss */
 .close-button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 173, ../../src/scss/grid.scss */
+/* line 174, ../../src/scss/grid.scss */
 .skills-title {
   display: block;
   width: 100%;
@@ -203,42 +202,43 @@
   padding: 15px 0px;
 }
 
-/* line 180, ../../src/scss/grid.scss */
+/* line 181, ../../src/scss/grid.scss */
 .skills-body {
   padding: 0 20px;
 }
 
-/* line 183, ../../src/scss/grid.scss */
+/* line 184, ../../src/scss/grid.scss */
 .orange-span {
   color: #d87855;
   font-size: 1rem;
 }
 
-/* line 187, ../../src/scss/grid.scss */
+/* line 188, ../../src/scss/grid.scss */
 .mainColor-span {
   color: #8793ab;
   font-size: 1.25rem;
 }
 
-/* line 194, ../../src/scss/grid.scss */
+/* line 195, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
 }
-/* line 204, ../../src/scss/grid.scss */
+/* line 205, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: "posttitle" "postsummary";
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: "postpic posttitle" "postpic postsummary";
   width: 100%;
   height: 110px;
   margin: 0;
   /*@include line(2px,black);*/
   transition: .35s all;
 }
-/* line 214, ../../src/scss/grid.scss */
+/* line 216, ../../src/scss/grid.scss */
 .posts-column--post-container:hover {
   border: 1px #d87855 solid;
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);

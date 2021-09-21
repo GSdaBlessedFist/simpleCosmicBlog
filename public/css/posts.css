@@ -10,6 +10,16 @@
 }
 
 /* line 4, ../../src/scss/posts.scss */
+.post-pic {
+  grid-area: postpic;
+  display: flex;
+  justify-content: center;
+  background-size: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* line 13, ../../src/scss/posts.scss */
 .post-titlebar {
   grid-area: posttitle;
   display: block;
@@ -21,7 +31,7 @@
   background: #074a69;
   border-bottom: 1.5px solid #074a69;
 }
-/* line 15, ../../src/scss/posts.scss */
+/* line 24, ../../src/scss/posts.scss */
 .post-titlebar_title {
   grid-area: articleTitle;
   width: 100%;
@@ -29,38 +39,40 @@
   padding: 10px 20px;
   padding-bottom: 0;
   font-size: 1.5rem;
-  color: white;
+  color: #79cef6;
   background: #074a69;
 }
 
-/* line 27, ../../src/scss/posts.scss */
+/* line 36, ../../src/scss/posts.scss */
 .post-summary {
   grid-area: postsummary;
-  display: block;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   text-align: center;
   font-size: .85rem;
   background: transparent;
   color: white;
 }
 
-/* line 37, ../../src/scss/posts.scss */
+/* line 47, ../../src/scss/posts.scss */
 .article-container {
   display: none;
   margin: 10% 5%;
+  padding: 0 20px;
   width: 90%;
   height: 90%;
   color: #d87855;
   overflow-y: auto;
 }
 
-/* line 45, ../../src/scss/posts.scss */
+/* line 56, ../../src/scss/posts.scss */
 .article-title {
   color: #d87855;
   text-align: center;
 }
 
-/* line 49, ../../src/scss/posts.scss */
+/* line 60, ../../src/scss/posts.scss */
 .article-words {
   color: #2a1209;
 }

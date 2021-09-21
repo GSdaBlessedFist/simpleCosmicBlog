@@ -2,6 +2,7 @@
 const p = console.log;
 const technicallyButton= document.getElementById("technically-button");
 const primeContainerGrid= document.getElementById("prime-container");
+const heroPic = document.getElementById("hero-pic");
 const titleColumn= document.getElementById("title-column");
 const titleImageSection= document.getElementById("title-column_image-section");
 const titlePic= document.getElementById("title-pic");
@@ -11,9 +12,10 @@ const closeButton= document.getElementById("close-button");
 const posts = document.getElementsByClassName("posts-column--post-container");
 const articleContainer= document.getElementById("article-container");
 const gridColumnsConfigs = {
-	"close": "40% 35% 0% 25%",
+	"close": "45% 30% 0% 25%",
 	"open": "25% 30% 20% 25%"
 }
+
 document.addEventListener('click',(e)=>{
 	e.preventDefault();
 	if(e.target==technicallyButton){
@@ -59,7 +61,10 @@ Array.from(posts).forEach((post)=>{
 		if(articleDisplayed){
 			articleContainer.innerHTML=``;
 		}
+		let pic = post.querySelector("#post-pic");
+		console.log(pic.dataset.postpic)
 		gsap.set(post,{border:selected});
+		heroPic.style.backgroundImage = `url(${pic.dataset.postpic})`;
 		gsap.set(post.querySelector(".post-titlebar_title"),{color:"hsl(16, 63%, 59%)"});
 		sendArticleToTitlePicSection(post);
 	})

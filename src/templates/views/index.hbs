@@ -12,7 +12,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
       <script>
          window.onload = ()=>{
-         	document.getElementById("prime-container").style.gridTemplateColumns= "40% 35% 0% 25%";
+         	document.getElementById("prime-container").style.gridTemplateColumns= "45% 30% 0% 25%";
             document.getElementById("title-column").style.gridTemplateRows= "55% 45%";
          }
          
@@ -21,9 +21,11 @@
    <body>
       <div class="prime-container" id="prime-container">
          <div class="prime-container--section hero-column">
-            <img src="{{dataset.pictures.0.imgix_url}}" class="hero-pic">
+            <!-- <img src="./images/optimized_underwater.jpg" class="hero-pic" id="hero-pic"/> -->
+            <div style='background-image:url("./images/optimized_underwater.jpg");' class="hero-pic" id="hero-pic"></div>
             <div class="tabs-group">
-               <div class="tabs-group_contact" id="contact">contact</div>
+               <!-- re-add at later date -->
+               <!-- <div class="tabs-group_contact" id="contact">contact</div> -->
                <div class="tabs-group_aboutme" id="aboutme">about me</div>
                <div class="tabs-group_other-works" id="other-works">other works</div>
             </div>
@@ -36,14 +38,14 @@
             </div>
             <div class="title-column_image" id="title-column_image-section">
                <a href="#" class="technically-button" id="technically-button">technically...</a>
-               <img src='{{dataset.pictures.2.imgix_url}}' alt="" class="title-pic" id="title-pic"/>
+               <img src="./images/optimized_candle.jpg" alt="" class="title-pic" id="title-pic"/>
                <div class="article-container" id="article-container"></div>
             </div>
          </div>
          <!-----------------SKILLS SECTION----------------------->
          <div class="prime-container--section skills-column" id="skills-column">
             <div class="skills-column_image-container">
-               <img style="background:url('{{dataset.pictures.1.imgix_url}}')"  class="skills-pic">
+               <img src='./images/optimized_smoke.jpg'  class="skills-pic"/>
                <div class="skills-column_image-container--button-container">
                   <button class="github-button"  id="github-button">github</button>
                </div>
@@ -77,6 +79,7 @@
             {{#each dataset.posts}}
             <a href="#" class="post" style="text-decoration: none;display:block;" >
                <div class="posts-column--post-container" data-post={{increment @index}}>
+                  <div class="post-pic"><img src='{{metadata.post_picture.imgix_url}}' data-postpic='{{metadata.post_picture.imgix_url}}' alt="" id="post-pic"/></div>
                   <div class="post-titlebar">
                      <div class="post-titlebar_title">{{title}}</div>
                   </div>

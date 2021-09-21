@@ -1,6 +1,15 @@
 @import "variables";
 @import "fonts";
 
+.post-pic{
+	grid-area: postpic;
+	display: flex;
+	justify-content: center;
+	background-size: 100%;
+	background-size: cover;
+	overflow: hidden;
+
+}
 .post-titlebar{
 	grid-area: posttitle;
 	display: block;
@@ -19,15 +28,16 @@
 		padding: 10px 20px;
 		padding-bottom: 0;
 		font-size: 1.5rem;
-		color: white;
+		color: lighten($color2,50%);
 		background: hsla($hue,87%,22%,1);
 	}
 	
 }
 .post-summary{
 	grid-area: postsummary;
-	display: block;
-	padding: 20px;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
 	text-align: center;
 	font-size: .85rem;
 	background: transparent;
@@ -37,6 +47,7 @@
 .article-container{
 	display:none;
 	margin: 10% 5%;
+	padding: 0 20px;
 	width: 90%;
 	height: 90%;
 	color: $color4;

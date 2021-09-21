@@ -30,8 +30,7 @@
 .hero-pic {
   display: block;
   width: 100%;
-  object-fit: cover;
-  height: 100vh;
+  background-size: cover;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -108,9 +107,9 @@
   display: inline;
   position: relative;
   width: 101%;
-  height: 101%;
-  margin: 0px;
-  padding: 0px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 10px;
   background-position: 25% 0%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -127,12 +126,12 @@
   opacity: 0;
   border-right: 2px #d87855 solid;
 }
-/* line 109, ../../src/scss/grid.scss */
+/* line 110, ../../src/scss/grid.scss */
 .skills-column_image-container {
   grid-area: skillsImage;
   width: 100%;
 }
-/* line 113, ../../src/scss/grid.scss */
+/* line 114, ../../src/scss/grid.scss */
 .skills-pic {
   display: block;
   width: 101%;
@@ -143,7 +142,7 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-/* line 125, ../../src/scss/grid.scss */
+/* line 126, ../../src/scss/grid.scss */
 .skills-column_image-container--button-container {
   display: block;
   width: 130px;
@@ -153,7 +152,7 @@
   margin: 0 33%;
   background: transparent;
 }
-/* line 134, ../../src/scss/grid.scss */
+/* line 135, ../../src/scss/grid.scss */
 .github-button {
   width: 100%;
   height: 40px;
@@ -162,17 +161,17 @@
   background: transparent;
   transition: .65s all;
 }
-/* line 141, ../../src/scss/grid.scss */
+/* line 142, ../../src/scss/grid.scss */
 .github-button:hover {
   background: #000;
 }
-/* line 148, ../../src/scss/grid.scss */
+/* line 149, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border-top: 1px white solid;
   font-family: 'Urbanist', sans-serif;
 }
-/* line 153, ../../src/scss/grid.scss */
+/* line 154, ../../src/scss/grid.scss */
 .close-button {
   display: inline;
   position: relative;
@@ -188,13 +187,13 @@
   border-radius: 20px;
   transition: .65s all;
 }
-/* line 168, ../../src/scss/grid.scss */
+/* line 169, ../../src/scss/grid.scss */
 .close-button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 173, ../../src/scss/grid.scss */
+/* line 174, ../../src/scss/grid.scss */
 .skills-title {
   display: block;
   width: 100%;
@@ -203,42 +202,43 @@
   padding: 15px 0px;
 }
 
-/* line 180, ../../src/scss/grid.scss */
+/* line 181, ../../src/scss/grid.scss */
 .skills-body {
   padding: 0 20px;
 }
 
-/* line 183, ../../src/scss/grid.scss */
+/* line 184, ../../src/scss/grid.scss */
 .orange-span {
   color: #d87855;
   font-size: 1rem;
 }
 
-/* line 187, ../../src/scss/grid.scss */
+/* line 188, ../../src/scss/grid.scss */
 .mainColor-span {
   color: #8793ab;
   font-size: 1.25rem;
 }
 
-/* line 194, ../../src/scss/grid.scss */
+/* line 195, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
 }
-/* line 204, ../../src/scss/grid.scss */
+/* line 205, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-areas: "posttitle" "postsummary";
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: "postpic posttitle" "postpic postsummary";
   width: 100%;
   height: 110px;
   margin: 0;
   /*@include line(2px,black);*/
   transition: .35s all;
 }
-/* line 214, ../../src/scss/grid.scss */
+/* line 216, ../../src/scss/grid.scss */
 .posts-column--post-container:hover {
   border: 1px #d87855 solid;
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);
@@ -273,7 +273,7 @@
 }
 /* line 22, ../../src/scss/tabs.scss */
 .tabs-group > div:hover {
-  background: rgba(216, 120, 85, 0.65);
+  background: rgba(216, 120, 85, 0.85);
 }
 /* line 26, ../../src/scss/tabs.scss */
 .tabs-group_other-works {
@@ -288,20 +288,15 @@
   text-align: center;
   border: 1px #074a69 solid;
   font-family: 'Urbanist', sans-serif;
+  border-top-right-radius: 25px;
   background: transparent;
 }
-/* line 38, ../../src/scss/tabs.scss */
+/* line 39, ../../src/scss/tabs.scss */
 .tabs-group_aboutme > p {
   background: transparent;
 }
-/* line 42, ../../src/scss/tabs.scss */
-.tabs-group_contact {
-  border: 1px #074a69 solid;
-  border-top-right-radius: 25px;
-  font-family: 'Urbanist', sans-serif;
-}
 
-/* line 48, ../../src/scss/tabs.scss */
+/* line 49, ../../src/scss/tabs.scss */
 .hero-section-text-container {
   display: none;
   opacity: 0;
@@ -316,7 +311,7 @@
   top: 100px;
 }
 
-/* line 61, ../../src/scss/tabs.scss */
+/* line 62, ../../src/scss/tabs.scss */
 .otherWorks {
   display: block;
   width: 90%;
@@ -329,7 +324,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-/* line 72, ../../src/scss/tabs.scss */
+/* line 73, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer {
   display: flex;
   flex-direction: column;
@@ -341,14 +336,14 @@
   padding: 5px auto;
   border-bottom: 1px rgba(0, 0, 0, 0.75) solid;
 }
-/* line 82, ../../src/scss/tabs.scss */
+/* line 83, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_title {
   text-align: center;
   background: transparent;
   padding: 13px;
   line-height: 15px;
 }
-/* line 88, ../../src/scss/tabs.scss */
+/* line 89, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_url {
   position: relative;
   top: -5px;
@@ -360,7 +355,7 @@
   padding: 15px auto;
 }
 
-/* line 103, ../../src/scss/tabs.scss */
+/* line 104, ../../src/scss/tabs.scss */
 h2 {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -368,7 +363,7 @@ h2 {
   user-select: none;
 }
 
-/* line 107, ../../src/scss/tabs.scss */
+/* line 108, ../../src/scss/tabs.scss */
 .aboutMe {
   display: block;
   width: 90%;
@@ -379,18 +374,22 @@ h2 {
   background: rgba(0, 0, 0, 0.5);
   text-indent: 20px;
 }
-/* line 117, ../../src/scss/tabs.scss */
+/* line 118, ../../src/scss/tabs.scss */
 .aboutMe > p {
   background: transparent;
 }
 
 /* line 123, ../../src/scss/tabs.scss */
-.tabsArea-close-button {
+.tabsArea-close-container {
+  width: 100%;
+}
+/* line 125, ../../src/scss/tabs.scss */
+.tabsArea-close-container_button {
   font-family: 'Urbanist', sans-serif;
-  display: none;
+  display: flex;
   position: relative;
   top: 8px;
-  left: 44%;
+  left: 92%;
   justify-content: center;
   align-items: center;
   width: 25px;
@@ -404,13 +403,13 @@ h2 {
   border-radius: 25px;
   transition: .65s all;
 }
-/* line 143, ../../src/scss/tabs.scss */
-.tabsArea-close-button:hover {
+/* line 144, ../../src/scss/tabs.scss */
+.tabsArea-close-container_button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 149, ../../src/scss/tabs.scss */
+/* line 153, ../../src/scss/tabs.scss */
 .orange-span {
   color: #d87855;
   font-size: 1.05rem;
@@ -418,6 +417,16 @@ h2 {
 }
 
 /* line 4, ../../src/scss/posts.scss */
+.post-pic {
+  grid-area: postpic;
+  display: flex;
+  justify-content: center;
+  background-size: 100%;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* line 13, ../../src/scss/posts.scss */
 .post-titlebar {
   grid-area: posttitle;
   display: block;
@@ -429,7 +438,7 @@ h2 {
   background: #074a69;
   border-bottom: 1.5px solid #074a69;
 }
-/* line 15, ../../src/scss/posts.scss */
+/* line 24, ../../src/scss/posts.scss */
 .post-titlebar_title {
   grid-area: articleTitle;
   width: 100%;
@@ -437,38 +446,40 @@ h2 {
   padding: 10px 20px;
   padding-bottom: 0;
   font-size: 1.5rem;
-  color: white;
+  color: #79cef6;
   background: #074a69;
 }
 
-/* line 27, ../../src/scss/posts.scss */
+/* line 36, ../../src/scss/posts.scss */
 .post-summary {
   grid-area: postsummary;
-  display: block;
-  padding: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
   text-align: center;
   font-size: .85rem;
   background: transparent;
   color: white;
 }
 
-/* line 37, ../../src/scss/posts.scss */
+/* line 47, ../../src/scss/posts.scss */
 .article-container {
   display: none;
   margin: 10% 5%;
+  padding: 0 20px;
   width: 90%;
   height: 90%;
   color: #d87855;
   overflow-y: auto;
 }
 
-/* line 45, ../../src/scss/posts.scss */
+/* line 56, ../../src/scss/posts.scss */
 .article-title {
   color: #d87855;
   text-align: center;
 }
 
-/* line 49, ../../src/scss/posts.scss */
+/* line 60, ../../src/scss/posts.scss */
 .article-words {
   color: #2a1209;
 }

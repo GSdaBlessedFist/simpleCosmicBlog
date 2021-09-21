@@ -4,10 +4,9 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const hbs = require("hbs");
-require('dotenv').config();
-const cors = require("cors");
-const nodemailer = require("nodemailer");
-const multiparty = require("multiparty");
+const cors = require('cors');
+require('dotenv').config()
+////////////CMS///////////////////////
 const Cosmic = require('cosmicjs');
 const api = Cosmic();
 const bucket = api.bucket({
@@ -15,9 +14,24 @@ const bucket = api.bucket({
   read_key: process.env.COSMIC_READ
   // write_key: 'SCCepIVDzTPhp4VWFurDfvbjqIwklMJsT1NU4A4QQJr8wLs0N3'
 })
+//////////////JPG Compression///////
+const sharp = require('sharp');
+
+(async()=>{
+	try{
+		await sharp("./src/images/underwater.jpg").jpeg({ progressive: true, force: false,mozjpeg: true,quality:60 }).toFile("./public/images/optimized_underwater.jpg");
+		await sharp("./src/images/smoke.jpg").jpeg({ progressive: true, force: false,mozjpeg: true,quality:60 }).toFile("./public/images/optimized_smoke.jpg");
+		await sharp("./src/images/candle.jpg").jpeg({ progressive: true, force: false,mozjpeg: true,quality:60 }).toFile("./public/images/optimized_candle.jpg");
+
+	}catch(error){
+		console.log(error)
+	}
+})()
+
+////////////////////////////////////
 const port = process.env.PORT || 3400;
 const p = console.log;
-p(bucket.slug)
+
 // Express config
 const publicDirectory = path.join(__dirname, "/public");
 const viewsPath = path.join(__dirname, "./src/templates/views");
@@ -78,9 +92,6 @@ app.get("/", async(req, res) => {
 	let postsInfo = {
 		"posts":postData.objects
 	};
-	let picturesInfo = {
-		"pictures":picturesData.media
-	};
 	let linkInfo = {
 		"links":linksData.objects
 	}
@@ -91,7 +102,6 @@ app.get("/", async(req, res) => {
 	let dataset = {
 		...homepageInfo,
 		...postsInfo,
-		...picturesInfo,
 		...linkInfo,
 		...aboutMeInfo
 	}
@@ -101,30 +111,17 @@ app.get("/", async(req, res) => {
 		color2: "hsl(50,75%,50%)"
 	}
 	console.log("#########################################")
-	p(chalk.yellow(JSON.stringify(dataset,null,2)))
+	// p(chalk.cyan(JSON.stringify(dataset.posts[0].metadata.post_picture.imgix_url)))
 	console.log("#######################################")
+
   res.render('index',{dataset});
 });
 
 ///////////EMAIL//////////////////////
 
-// const transporter = nodemailer.createTransport({
-//   service: "gmail",
-//   auth: {
-//     user: process.env.GMAIL_EMAIL,
-//     pass: process.env.GMAIL_PASSWORD
-//   }
-// });
-// transporter.verify(function (error, success) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log("Server is ready to take our messages");
-//   }
-// });
-
-
+//more to come
+///////////EMAIL//////////////////////
 
 app.listen(port, () => {
-  console.log(`Red to go on port: ${port}`);
+  console.log(chalk.yellow.bold(`Red to go on port: ${port}`));
 });
