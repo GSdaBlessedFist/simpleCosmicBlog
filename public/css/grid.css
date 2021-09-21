@@ -151,27 +151,29 @@
   top: -70px;
   margin: 0 33%;
   background: transparent;
+  border: none;
 }
-/* line 135, ../../src/scss/grid.scss */
+/* line 136, ../../src/scss/grid.scss */
 .github-button {
   width: 100%;
   height: 40px;
   letter-spacing: 1.5px;
   font-family: 'Urbanist', sans-serif;
   background: transparent;
+  color: #074a69;
   transition: .65s all;
 }
-/* line 142, ../../src/scss/grid.scss */
+/* line 144, ../../src/scss/grid.scss */
 .github-button:hover {
-  background: #000;
+  background: rgba(7, 74, 105, 0.35);
 }
-/* line 149, ../../src/scss/grid.scss */
+/* line 151, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border-top: 1px white solid;
   font-family: 'Urbanist', sans-serif;
 }
-/* line 154, ../../src/scss/grid.scss */
+/* line 156, ../../src/scss/grid.scss */
 .close-button {
   display: inline;
   position: relative;
@@ -187,13 +189,13 @@
   border-radius: 20px;
   transition: .65s all;
 }
-/* line 169, ../../src/scss/grid.scss */
+/* line 171, ../../src/scss/grid.scss */
 .close-button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 174, ../../src/scss/grid.scss */
+/* line 176, ../../src/scss/grid.scss */
 .skills-title {
   display: block;
   width: 100%;
@@ -202,31 +204,31 @@
   padding: 15px 0px;
 }
 
-/* line 181, ../../src/scss/grid.scss */
+/* line 183, ../../src/scss/grid.scss */
 .skills-body {
   padding: 0 20px;
 }
 
-/* line 184, ../../src/scss/grid.scss */
+/* line 186, ../../src/scss/grid.scss */
 .orange-span {
   color: #d87855;
   font-size: 1rem;
 }
 
-/* line 188, ../../src/scss/grid.scss */
+/* line 190, ../../src/scss/grid.scss */
 .mainColor-span {
   color: #8793ab;
   font-size: 1.25rem;
 }
 
-/* line 195, ../../src/scss/grid.scss */
+/* line 197, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
 }
-/* line 205, ../../src/scss/grid.scss */
+/* line 207, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -238,7 +240,7 @@
   /*@include line(2px,black);*/
   transition: .35s all;
 }
-/* line 216, ../../src/scss/grid.scss */
+/* line 218, ../../src/scss/grid.scss */
 .posts-column--post-container:hover {
   border: 1px #d87855 solid;
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);

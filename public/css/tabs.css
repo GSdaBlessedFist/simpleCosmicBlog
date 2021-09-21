@@ -82,6 +82,7 @@
   width: 90%;
   height: 90%;
   color: #d87855;
+  font-family: 'Urbanist', sans-serif;
   padding: 20px 0;
   background: rgba(0, 0, 0, 0.5);
   -webkit-user-select: none;
@@ -89,7 +90,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-/* line 73, ../../src/scss/tabs.scss */
+/* line 74, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer {
   display: flex;
   flex-direction: column;
@@ -101,14 +102,15 @@
   padding: 5px auto;
   border-bottom: 1px rgba(0, 0, 0, 0.75) solid;
 }
-/* line 83, ../../src/scss/tabs.scss */
+/* line 84, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_title {
   text-align: center;
   background: transparent;
   padding: 13px;
   line-height: 15px;
+  font-family: 'Urbanist', sans-serif;
 }
-/* line 89, ../../src/scss/tabs.scss */
+/* line 91, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_url {
   position: relative;
   top: -5px;
@@ -118,9 +120,10 @@
   color: #ebbaa8;
   background: transparent;
   padding: 15px auto;
+  font-family: 'Urbanist', sans-serif;
 }
 
-/* line 104, ../../src/scss/tabs.scss */
+/* line 107, ../../src/scss/tabs.scss */
 h2 {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -128,27 +131,28 @@ h2 {
   user-select: none;
 }
 
-/* line 108, ../../src/scss/tabs.scss */
+/* line 111, ../../src/scss/tabs.scss */
 .aboutMe {
   display: block;
   width: 90%;
   height: 90%;
   font-family: 'Urbanist', sans-serif;
   padding: 15px;
+  line-height: 25px;
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.5);
   text-indent: 20px;
 }
-/* line 118, ../../src/scss/tabs.scss */
+/* line 122, ../../src/scss/tabs.scss */
 .aboutMe > p {
   background: transparent;
 }
 
-/* line 123, ../../src/scss/tabs.scss */
+/* line 127, ../../src/scss/tabs.scss */
 .tabsArea-close-container {
   width: 100%;
 }
-/* line 125, ../../src/scss/tabs.scss */
+/* line 129, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button {
   font-family: 'Urbanist', sans-serif;
   display: flex;
@@ -168,13 +172,13 @@ h2 {
   border-radius: 25px;
   transition: .65s all;
 }
-/* line 144, ../../src/scss/tabs.scss */
+/* line 148, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 153, ../../src/scss/tabs.scss */
+/* line 157, ../../src/scss/tabs.scss */
 .orange-span {
   color: #d87855;
   font-size: 1.05rem;

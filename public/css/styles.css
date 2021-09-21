@@ -151,27 +151,29 @@
   top: -70px;
   margin: 0 33%;
   background: transparent;
+  border: none;
 }
-/* line 135, ../../src/scss/grid.scss */
+/* line 136, ../../src/scss/grid.scss */
 .github-button {
   width: 100%;
   height: 40px;
   letter-spacing: 1.5px;
   font-family: 'Urbanist', sans-serif;
   background: transparent;
+  color: #074a69;
   transition: .65s all;
 }
-/* line 142, ../../src/scss/grid.scss */
+/* line 144, ../../src/scss/grid.scss */
 .github-button:hover {
-  background: #000;
+  background: rgba(7, 74, 105, 0.35);
 }
-/* line 149, ../../src/scss/grid.scss */
+/* line 151, ../../src/scss/grid.scss */
 .skills-column_skills-main {
   grid-area: skillsContent;
   border-top: 1px white solid;
   font-family: 'Urbanist', sans-serif;
 }
-/* line 154, ../../src/scss/grid.scss */
+/* line 156, ../../src/scss/grid.scss */
 .close-button {
   display: inline;
   position: relative;
@@ -187,13 +189,13 @@
   border-radius: 20px;
   transition: .65s all;
 }
-/* line 169, ../../src/scss/grid.scss */
+/* line 171, ../../src/scss/grid.scss */
 .close-button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 174, ../../src/scss/grid.scss */
+/* line 176, ../../src/scss/grid.scss */
 .skills-title {
   display: block;
   width: 100%;
@@ -202,31 +204,31 @@
   padding: 15px 0px;
 }
 
-/* line 181, ../../src/scss/grid.scss */
+/* line 183, ../../src/scss/grid.scss */
 .skills-body {
   padding: 0 20px;
 }
 
-/* line 184, ../../src/scss/grid.scss */
+/* line 186, ../../src/scss/grid.scss */
 .orange-span {
   color: #d87855;
   font-size: 1rem;
 }
 
-/* line 188, ../../src/scss/grid.scss */
+/* line 190, ../../src/scss/grid.scss */
 .mainColor-span {
   color: #8793ab;
   font-size: 1.25rem;
 }
 
-/* line 195, ../../src/scss/grid.scss */
+/* line 197, ../../src/scss/grid.scss */
 .posts-column {
   display: flex;
   flex-direction: column;
   height: 100vh;
   overflow-y: auto;
 }
-/* line 205, ../../src/scss/grid.scss */
+/* line 207, ../../src/scss/grid.scss */
 .posts-column--post-container {
   display: grid;
   grid-template-columns: 25% 75%;
@@ -238,7 +240,7 @@
   /*@include line(2px,black);*/
   transition: .35s all;
 }
-/* line 216, ../../src/scss/grid.scss */
+/* line 218, ../../src/scss/grid.scss */
 .posts-column--post-container:hover {
   border: 1px #d87855 solid;
   box-shadow: inset -10px 0 10px rgba(216, 120, 85, 0.5);
@@ -317,6 +319,7 @@
   width: 90%;
   height: 90%;
   color: #d87855;
+  font-family: 'Urbanist', sans-serif;
   padding: 20px 0;
   background: rgba(0, 0, 0, 0.5);
   -webkit-user-select: none;
@@ -324,7 +327,7 @@
   -ms-user-select: none;
   user-select: none;
 }
-/* line 73, ../../src/scss/tabs.scss */
+/* line 74, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer {
   display: flex;
   flex-direction: column;
@@ -336,14 +339,15 @@
   padding: 5px auto;
   border-bottom: 1px rgba(0, 0, 0, 0.75) solid;
 }
-/* line 83, ../../src/scss/tabs.scss */
+/* line 84, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_title {
   text-align: center;
   background: transparent;
   padding: 13px;
   line-height: 15px;
+  font-family: 'Urbanist', sans-serif;
 }
-/* line 89, ../../src/scss/tabs.scss */
+/* line 91, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_url {
   position: relative;
   top: -5px;
@@ -353,9 +357,10 @@
   color: #ebbaa8;
   background: transparent;
   padding: 15px auto;
+  font-family: 'Urbanist', sans-serif;
 }
 
-/* line 104, ../../src/scss/tabs.scss */
+/* line 107, ../../src/scss/tabs.scss */
 h2 {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -363,27 +368,28 @@ h2 {
   user-select: none;
 }
 
-/* line 108, ../../src/scss/tabs.scss */
+/* line 111, ../../src/scss/tabs.scss */
 .aboutMe {
   display: block;
   width: 90%;
   height: 90%;
   font-family: 'Urbanist', sans-serif;
   padding: 15px;
+  line-height: 25px;
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.5);
   text-indent: 20px;
 }
-/* line 118, ../../src/scss/tabs.scss */
+/* line 122, ../../src/scss/tabs.scss */
 .aboutMe > p {
   background: transparent;
 }
 
-/* line 123, ../../src/scss/tabs.scss */
+/* line 127, ../../src/scss/tabs.scss */
 .tabsArea-close-container {
   width: 100%;
 }
-/* line 125, ../../src/scss/tabs.scss */
+/* line 129, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button {
   font-family: 'Urbanist', sans-serif;
   display: flex;
@@ -403,13 +409,13 @@ h2 {
   border-radius: 25px;
   transition: .65s all;
 }
-/* line 144, ../../src/scss/tabs.scss */
+/* line 148, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 153, ../../src/scss/tabs.scss */
+/* line 157, ../../src/scss/tabs.scss */
 .orange-span {
   color: #d87855;
   font-size: 1.05rem;

@@ -66,6 +66,7 @@
 	//flex-direction: column;
 	//justify-content: space-evenly;
 	color: $color4;
+	@include font1;
 	padding: 20px 0;
 	background: rgba(0,0,0,.5);
 	@include disableSelect;
@@ -85,6 +86,7 @@
 			background: transparent;
 			padding: 13px;
 			line-height: 15px;
+			@include font1;
 		}
 		&_url{
 			position: relative;
@@ -95,6 +97,7 @@
 			color:hsl(16, 63%, 79%);
 			background: transparent;
 			padding: 15px auto;
+			@include font1;
 		}
 		&_description{
 			//@include line(2px,red);
@@ -112,6 +115,7 @@ h2{
 	// @include line(2px,red);
 	@include font1;
 	padding: 15px;
+	line-height: 25px;
 	overflow-y: auto;
 	background: rgba(0,0,0,.5);
 	text-indent: 20px;
