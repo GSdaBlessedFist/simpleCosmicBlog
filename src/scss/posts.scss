@@ -17,7 +17,7 @@
 	padding-bottom: 5px;
 	overflow:hidden;
 	@include font1;
-	font-weight: 900;
+	font-weight: bold;
 	background: hsla($hue,87%,22%,1);
 	
 	border-bottom: 1.5px solid $color2;

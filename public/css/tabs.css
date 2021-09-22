@@ -82,7 +82,6 @@
   width: 90%;
   height: 90%;
   color: #d87855;
-  font-family: 'Urbanist', sans-serif;
   padding: 20px 0;
   background: rgba(0, 0, 0, 0.5);
   -webkit-user-select: none;
@@ -96,17 +95,17 @@
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
-  height: 100px;
+  height: 120px;
   color: #d87855;
   background: transparent;
   padding: 5px auto;
-  border-bottom: 1px rgba(0, 0, 0, 0.75) solid;
+  border-bottom: 1px #d87855 solid;
 }
 /* line 84, ../../src/scss/tabs.scss */
 .otherWorks--linkContainer_title {
   text-align: center;
   background: transparent;
-  padding: 13px;
+  padding: 0px;
   line-height: 15px;
   font-family: 'Urbanist', sans-serif;
 }
@@ -119,11 +118,12 @@
   font-size: .85rem;
   color: #ebbaa8;
   background: transparent;
-  padding: 15px auto;
+  padding: 0px 5px;
+  overflow-wrap: break-word;
   font-family: 'Urbanist', sans-serif;
 }
 
-/* line 107, ../../src/scss/tabs.scss */
+/* line 108, ../../src/scss/tabs.scss */
 h2 {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -131,28 +131,28 @@ h2 {
   user-select: none;
 }
 
-/* line 111, ../../src/scss/tabs.scss */
+/* line 112, ../../src/scss/tabs.scss */
 .aboutMe {
   display: block;
   width: 90%;
   height: 90%;
   font-family: 'Urbanist', sans-serif;
   padding: 15px;
-  line-height: 25px;
+  line-height: 20px;
   overflow-y: auto;
   background: rgba(0, 0, 0, 0.5);
   text-indent: 20px;
 }
-/* line 122, ../../src/scss/tabs.scss */
+/* line 123, ../../src/scss/tabs.scss */
 .aboutMe > p {
   background: transparent;
 }
 
-/* line 127, ../../src/scss/tabs.scss */
+/* line 128, ../../src/scss/tabs.scss */
 .tabsArea-close-container {
   width: 100%;
 }
-/* line 129, ../../src/scss/tabs.scss */
+/* line 130, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button {
   font-family: 'Urbanist', sans-serif;
   display: flex;
@@ -172,13 +172,13 @@ h2 {
   border-radius: 25px;
   transition: .65s all;
 }
-/* line 148, ../../src/scss/tabs.scss */
+/* line 149, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 157, ../../src/scss/tabs.scss */
+/* line 158, ../../src/scss/tabs.scss */
 .orange-span {
   color: #d87855;
   font-size: 1.05rem;
