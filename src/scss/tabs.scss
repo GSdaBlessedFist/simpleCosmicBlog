@@ -34,17 +34,16 @@
 		text-align: center;
 		@include line(1px,$color2);
 		@include font1;
-		border-top-right-radius: 25px;
 		background: transparent;
 		&>p{
 			background: transparent;
 		}
 	}
-	// &_contact{
-	// 	@include line(1px,$color2);
-	// 	border-top-right-radius: 25px;
-	// 	@include font1;
-	// }
+	&_contact{
+		@include line(1px,$color2);
+		border-top-right-radius: 25px;
+		@include font1;
+	}
 }
 .hero-section-text-container{
 	display: none;
@@ -66,7 +65,6 @@
 	//flex-direction: column;
 	//justify-cotent: space-evenly;
 	color: $color4;
-	
 	padding: 20px 0;
 	background: rgba(0,0,0,.5);
 	@include disableSelect;
@@ -107,8 +105,8 @@
 }
 h2{
 	@include disableSelect;
+	text-align: center;
 }
-
 .aboutMe{
 	display: block;
 	width: 90%;
@@ -124,7 +122,81 @@ h2{
 		background: transparent;
 	}
 }
-
+.emailFormContainer {
+  display: flex;
+  width: 90%;
+  height: 90%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  &_email-title {
+  	padding: 0px;
+  	margin-top: 30px;
+  	font-size: 2.34rem;
+  	@include font1;
+  	background: transparent;
+  }
+  &_email-address{
+  	position: relative;
+  	top: -55px;
+  	margin: 15px 0;
+  	margin-bottom: 45px;
+  	color: hsl(16, 63%, 59%);
+  	background: transparent;
+  }
+  & h2 {
+  	width: 100%;
+    text-align: center;
+    background: transparent;
+  }
+  @at-root {
+    .email-greeting {
+    	position: relative;
+    	top: -100px;
+    	width: 85%;
+    	@include font1;
+    	font-size: 1.5rem;
+    	text-align: center;
+    	color: lighten($color4,25%);
+    	background: transparent;
+    }
+  }
+  &_contact-form {
+  	background: transparent;
+    @at-root {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+				top: -130px;
+				background: transparent;
+        & input {
+          margin: 2.5px auto;
+          font-size: 1.25rem;
+          margin: 5px auto;
+          background: transparent;
+        }
+      }
+      #message{
+      	background: transparent;
+      }
+      .contact-submit-button {
+        display: inline;
+        position: relative;
+        left: calc(90% - 50px);
+        margin: 25px;
+        transition: .65s all;
+        border: 2px white solid;
+        padding: 5px;
+        color:hsl(16, 63%, 59%);
+        &:hover{
+        	border: 2px $color4 solid;
+        	color: white;
+        }
+      }
+    }
+  }
+}
 .tabsArea-close-container{
 	width: 100%;
 	&_button{
@@ -152,9 +224,6 @@ h2{
 	}
 }
 }
-
-
-
 .orange-span{
 	color: $color4;
 	font-size: 1.05rem;

@@ -1,7 +1,6 @@
-//tabs.js
 const otherWorksButton= document.getElementById("other-works"),
-	  aboutMeButton = document.getElementById("aboutme");
-	  // contactButton = document.getElementById("contact");
+	  aboutMeButton = document.getElementById("aboutme"),
+	  contactButton = document.getElementById("contact");
 const otherWorks_links = document.querySelectorAll('[data-linktitle]');
 const aboutMeContent= document.querySelector('[data-aboutmecontent]');
 const heroSectionTextContainer= document.getElementById("hero-section-text-container");
@@ -10,17 +9,23 @@ const tabsAreaCloseButton= document.querySelectorAll("tabsArea-close-container_b
 var heroTextDisplaying = false;
 var otherWorksDisplaying = false;
 var aboutMeDisplaying = false;
+var contactDisplaying = false;
 document.addEventListener('click',(e)=>{
 	if(e.target==otherWorksButton){
-
+		console.log("OTHER WORKS")
 		displayHeroSectionTextContainer();
-		displayOtherWorksInfo()
+		
+		displayOtherWorksInfo();
 	};
 	if(e.target==aboutMeButton){
 		console.log("ABOUT ME")
 		displayHeroSectionTextContainer();
 		displayAboutMeInfo();
-
+	}
+	if(e.target==contactButton){
+		console.log("CONTACT ME");
+		displayHeroSectionTextContainer();
+		displayContactInfo();
 	}
 })
 
@@ -32,7 +37,7 @@ function displayHeroSectionTextContainer(){
 }
 function displayOtherWorksInfo(){
 	if(otherWorksDisplaying==true)return;
-	if(aboutMeDisplaying==true){
+	if(aboutMeDisplaying==true || contactDisplaying==true){
 		heroSectionTextContainer.innerHTML=``;
 	}
 	heroSectionTextContainer.innerHTML+=`
@@ -51,11 +56,9 @@ function displayOtherWorksInfo(){
 			</div>
 		</div>
 	`;
-
-
 	otherWorksDisplaying=true;
 	aboutMeDisplaying = false;
-
+	contactDisplaying  = false;
 	}
 	let close = document.querySelector(".tabsArea-close-container_button");
 	close.addEventListener('click',(e)=>{
@@ -66,13 +69,15 @@ function displayOtherWorksInfo(){
 		heroTextDisplaying = false;
 		otherWorksDisplaying = false;
 		aboutMeDisplaying = false;
+		contactDisplaying  = false;
 	})
 }
 function displayAboutMeInfo() {
-	if(otherWorksDisplaying==true){
+	if(aboutMeDisplaying==true)return;
+	if(otherWorksDisplaying==true || contactDisplaying==true){
 		heroSectionTextContainer.innerHTML=``;
 	}
-	if(aboutMeDisplaying==true)return;
+	
 	heroSectionTextContainer.innerHTML+=`
 		<a href="#" class="tabsArea-close-container" style="text-decoration:none;background:transparent;">
 		<div class="tabsArea-close-container_button" id="tabsArea-close-container_button">X</div>
@@ -86,6 +91,7 @@ function displayAboutMeInfo() {
 	`;
 	otherWorksDisplaying = false;
 	aboutMeDisplaying = true;
+	contactDisplaying  = false;
 	let close = document.querySelector(".tabsArea-close-container_button");
 	close.addEventListener('click',(e)=>{
 		e.preventDefault();
@@ -95,5 +101,79 @@ function displayAboutMeInfo() {
 		heroTextDisplaying = false;
 		otherWorksDisplaying = false;
 		aboutMeDisplaying = false;
+		contactDisplaying  = false;
+	})
+}
+function displayContactInfo(){
+	if(contactDisplaying==true)return;
+	if(aboutMeDisplaying==true || otherWorksDisplaying==true){
+		heroSectionTextContainer.innerHTML=``;
+
+	}
+
+	heroSectionTextContainer.innerHTML+=`
+		<a href="#" class="tabsArea-close-container" style="text-decoration:none;background:transparent;">
+		<div class="tabsArea-close-container_button" id="tabsArea-close-container_button">X</div>
+		</a>
+		<h2 style="color:hsl(16, 63%, 59%);background:transparent;">contact</h2>
+		<div class="emailFormContainer">
+			<div class="emailFormContainer_email-title">Jason Zamora</div>
+			<h3 class="emailFormContainer_email-address">GSdaBlessedFist@gmail.com</h3>
+			<div class="email-greeting">
+				Comments...feedback...</br>Interested in hiring? </br>Send a message.
+			</div>
+			<form id="emailFormContainer_contact-form" method="POST" action="localhost:3400/email" enctype="multipart/form-data">
+				<div class="form-group">
+					<input placeholder="Name" id="name" name="name" type="text" class="form-name" required />
+					<input placeholder="Email" id="email" type="email" name="email" class="form-control" aria-describedby="emailHelp" required />
+					<textarea placeholder="Message" id="message" name="message" class="form-control" rows="3" cols="5" required></textarea>
+				</div>
+				<button type="submit" value="submit" class="contact-submit-button">Submit</button>
+			</form>
+		</div>
+	`;
+	///////////////////////////SEND MESSAGE/////////////////////////////////////
+	const submit = document.querySelector('.contact-submit-button');
+	submit.addEventListener('click', (e) => {
+	    e.preventDefault();
+	    let name = document.getElementById("name").value.trim();
+	    let email = document.getElementById("email").value.trim();
+	    let message = document.getElementById("message").value.trim();
+	    const data = {
+	        name,
+	        email,
+	        message
+	    }
+	    console.log(data)
+	    const send = async (data) => {
+	        try {
+	            const message = await axios.post('/email', data)
+	            .then(function(response) {
+	                return response.json;
+	            })
+	            .then(datum => {
+	            	console.log(datum)
+	            })
+	        }catch (error) {
+	            console.log(error)
+	        }
+	    }
+	    send(data)
+	})
+	///////////////////////////////////////////////////////////
+
+	otherWorksDisplaying = false;
+	aboutMeDisplaying = false;
+	contactDisplaying  = true;
+	let close = document.querySelector(".tabsArea-close-container_button");
+	close.addEventListener('click',(e)=>{
+		e.preventDefault();
+		gsap.to(close,{duration:.35,opacity:0});
+		gsap.to(heroSectionTextContainer,{duration:.35,opacity:0});
+		heroSectionTextContainer.innerHTML=``;
+		heroTextDisplaying = false;
+		otherWorksDisplaying = false;
+		aboutMeDisplaying = false;
+		contactDisplaying  = false;
 	})
 }
