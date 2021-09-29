@@ -160,7 +160,7 @@ h2 {
   width: 90%;
   height: 90%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 /* line 132, ../../src/scss/tabs.scss */
@@ -174,7 +174,7 @@ h2 {
 /* line 139, ../../src/scss/tabs.scss */
 .emailFormContainer_email-address {
   position: relative;
-  top: -55px;
+  top: -25px;
   margin: 15px 0;
   margin-bottom: 45px;
   color: #d87855;
@@ -189,7 +189,7 @@ h2 {
 /* line 153, ../../src/scss/tabs.scss */
 .email-greeting {
   position: relative;
-  top: -100px;
+  top: -50px;
   width: 85%;
   font-family: 'Urbanist', sans-serif;
   font-size: 1.5rem;
@@ -206,23 +206,32 @@ h2 {
   display: flex;
   flex-direction: column;
   position: relative;
-  top: -130px;
+  top: -50px;
   background: transparent;
 }
 /* line 173, ../../src/scss/tabs.scss */
 .form-group input {
-  margin: 2.5px auto;
   font-size: 1.25rem;
+  padding: 10px;
   margin: 5px auto;
   background: transparent;
 }
 
 /* line 180, ../../src/scss/tabs.scss */
-#message {
-  background: transparent;
+textarea {
+  background: inherit;
 }
 
 /* line 183, ../../src/scss/tabs.scss */
+#message {
+  background: transparent;
+  padding: 10px;
+  font-size: 1.25rem;
+  margin-top: 5px;
+  resize: none;
+}
+
+/* line 190, ../../src/scss/tabs.scss */
 .contact-submit-button {
   display: inline;
   position: relative;
@@ -233,17 +242,17 @@ h2 {
   padding: 5px;
   color: #d87855;
 }
-/* line 192, ../../src/scss/tabs.scss */
+/* line 199, ../../src/scss/tabs.scss */
 .contact-submit-button:hover {
   border: 2px #d87855 solid;
   color: white;
 }
 
-/* line 200, ../../src/scss/tabs.scss */
+/* line 207, ../../src/scss/tabs.scss */
 .tabsArea-close-container {
   width: 100%;
 }
-/* line 202, ../../src/scss/tabs.scss */
+/* line 209, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button {
   font-family: 'Urbanist', sans-serif;
   display: flex;
@@ -263,13 +272,13 @@ h2 {
   border-radius: 25px;
   transition: .65s all;
 }
-/* line 221, ../../src/scss/tabs.scss */
+/* line 228, ../../src/scss/tabs.scss */
 .tabsArea-close-container_button:hover {
   color: #d87855;
   border: 2px #d87855 solid;
 }
 
-/* line 227, ../../src/scss/tabs.scss */
+/* line 234, ../../src/scss/tabs.scss */
 .orange-span {
   color: #d87855;
   font-size: 1.05rem;

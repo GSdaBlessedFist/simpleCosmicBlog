@@ -139,6 +139,10 @@ function displayContactInfo(){
 	    let name = document.getElementById("name").value.trim();
 	    let email = document.getElementById("email").value.trim();
 	    let message = document.getElementById("message").value.trim();
+
+	    const reg = /<.*?>/ig;
+		message.replace(reg,"");
+
 	    const data = {
 	        name,
 	        email,
@@ -159,6 +163,8 @@ function displayContactInfo(){
 	        }
 	    }
 	    send(data)
+	    heroTextDisplaying = false;
+	    gsap.to(heroSectionTextContainer,{duration:.65,delay:.75,opacity:0});
 	})
 	///////////////////////////////////////////////////////////
 

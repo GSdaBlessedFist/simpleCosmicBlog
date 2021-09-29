@@ -127,7 +127,7 @@ h2{
   width: 90%;
   height: 90%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   &_email-title {
   	padding: 0px;
@@ -138,7 +138,7 @@ h2{
   }
   &_email-address{
   	position: relative;
-  	top: -55px;
+  	top: -25px;
   	margin: 15px 0;
   	margin-bottom: 45px;
   	color: hsl(16, 63%, 59%);
@@ -152,7 +152,7 @@ h2{
   @at-root {
     .email-greeting {
     	position: relative;
-    	top: -100px;
+    	top: -50px;
     	width: 85%;
     	@include font1;
     	font-size: 1.5rem;
@@ -168,17 +168,24 @@ h2{
         display: flex;
         flex-direction: column;
         position: relative;
-				top: -130px;
+				top: -50px;
 				background: transparent;
         & input {
-          margin: 2.5px auto;
           font-size: 1.25rem;
+          padding: 10px;
           margin: 5px auto;
           background: transparent;
         }
       }
+      textarea{
+      	background: inherit;
+      }
       #message{
       	background: transparent;
+      	padding: 10px;
+      	font-size: 1.25rem;
+      	margin-top: 5px;
+      	resize: none;
       }
       .contact-submit-button {
         display: inline;

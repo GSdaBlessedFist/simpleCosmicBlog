@@ -123,7 +123,7 @@ app.post('/email',(req,res)=>{
            "https://developers.google.com/oauthplayground" // Redirect URL
       );
       oauth2Client.setCredentials({
-        refresh_token: "1//04eXSznqmnWL1CgYIARAAGAQSNwF-L9IrKmVUctcV9RMSNDeFiPGtW45F-BQRiJDS4s1n8QBPpjozgrqpiKYlCWGssE8Mzjg5U7E"
+        refresh_token: process.env.REFRESHTOKEN
       });
       const accessToken = oauth2Client.getAccessToken();
 /////////////////////////TRANSPORTER/////////////////////////////
@@ -147,7 +147,7 @@ app.post('/email',(req,res)=>{
         sender: req.body.name,
         to: "Gsdablessedfist@gmail.com",
         // to: "baughman.kristy77@gmail.com",
-        subject: "Someone was interested.",
+        subject: "Someone was interested in the Simplolog.",
         generateTextFromHTML: true,
         html: `
         <div style="background: #112;color: white;padding: 20px;">
@@ -161,11 +161,24 @@ app.post('/email',(req,res)=>{
       const thankyouMessage = {
         from: "gsdablessedfist@gmail.com",
         to: req.body.email,
-        subject: "Thank you for your interest..",
+        subject: "Thank you for your interest...",
         generateTextFromHTML: true,
         html : `
-          <div style="display:block;width:100%;height:100vh;color:purple;font-size:1.5rem;">Love ya, toosery
-          </div>
+          <div style="display:block;
+	            width:100%;
+	            height:45vh;
+	            color:steelblue;
+	            background: #001;
+	            padding: 15px;
+	            font-size:1.25rem;
+	            overflow:hidden;"><span style="font-size:1.45rem;color:#7dc4ff;">Thank you  very much</span> for your time and consideration.<br>
+					  I look foward to, hopefully, meeting with you soon.<br>
+					  <p>
+					    <span style="color:hsl(16, 63%, 59%);font-size:1.4rem">Jason E. Zamora</span><br>
+					    <span style="color:#b48946;line-height:30px;">TN: 737-271-8122<br>
+					    email: GSdaBlessedFist@gmail.com</span><br>
+					  </p>
+					</div>
         `
       }
 ///////////////////////SEND//////////////////////////////
