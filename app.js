@@ -58,7 +58,7 @@ app.use('/', (req, res, next) => {
 })
 ///////////////////////////////////////////////////////////
 app.get("/", async(req, res) => {
-	
+	try{
 		let homepageData = await bucket.getObject({
 		  id: '613f5b78695852000929437b',
 		  props: 'title,content'
@@ -112,7 +112,9 @@ app.get("/", async(req, res) => {
 		// p(chalk.cyan(JSON.stringify(dataset.posts[0].metadata.post_picture.imgix_url)))
 		console.log("#######################################")
 	  res.render('index',{dataset});
-	
+	}catch(e){
+		console.error(e);
+	}
 	
 });
 ///////////EMAIL///////////////////////////////////////////////
