@@ -60,57 +60,58 @@ app.use('/', (req, res, next) => {
 app.get("/", async(req, res) => {
 	try{
 		let homepageData = await bucket.getObject({
-	  id: '613f5b78695852000929437b',
-	  props: 'title,content'
-	})
-	let postData = await bucket.getObjects({
-		query:{
-			type: "comments"
-		},
-		props: "id,slug,title,content,metadata"
-	})
-	let picturesData = await bucket.getMedia({
-		props: "imgix_url"
-	});
-	let linksData = await bucket.getObjects({
-		query:{
-			type: "links"
-		},
-		props:"slug,title,content,metadata",
-		limit: 10
-	});
-	let aboutMeData = await bucket.getObject({
-		 id: '614780a6cdf3270009df0c70',
-  	 props: 'slug,title,content'
-	});
-	//////////////////////////////////////////
-	let homepageInfo = {
-		"homepage": homepageData.object	
-	};
-	let postsInfo = {
-		"posts":postData.objects
-	};
-	let linkInfo = {
-		"links":linksData.objects
-	}
-	let aboutMeInfo = {
-		"aboutMe": aboutMeData.object
-	}
-	///////////////////////////////////////////
-	let dataset = {
-		...homepageInfo,
-		...postsInfo,
-		...linkInfo,
-		...aboutMeInfo
-	}
-	let colors = {
-		color1: "hsl(30,50%,50%)",
-		color2: "hsl(50,75%,50%)"
-	}
-	console.log("#########################################")
-	// p(chalk.cyan(JSON.stringify(dataset.posts[0].metadata.post_picture.imgix_url)))
-	console.log("#######################################")
-  res.render('index',{dataset});
+		  id: '613f5b78695852000929437b',
+		  props: 'title,content'
+		})
+		if(homepageData){console.log("connected")}
+		let postData = await bucket.getObjects({
+			query:{
+				type: "comments"
+			},
+			props: "id,slug,title,content,metadata"
+		})
+		let picturesData = await bucket.getMedia({
+			props: "imgix_url"
+		});
+		let linksData = await bucket.getObjects({
+			query:{
+				type: "links"
+			},
+			props:"slug,title,content,metadata",
+			limit: 10
+		});
+		let aboutMeData = await bucket.getObject({
+			 id: '614780a6cdf3270009df0c70',
+	  	 props: 'slug,title,content'
+		});
+		//////////////////////////////////////////
+		let homepageInfo = {
+			"homepage": homepageData.object	
+		};
+		let postsInfo = {
+			"posts":postData.objects
+		};
+		let linkInfo = {
+			"links":linksData.objects
+		}
+		let aboutMeInfo = {
+			"aboutMe": aboutMeData.object
+		}
+		///////////////////////////////////////////
+		let dataset = {
+			...homepageInfo,
+			...postsInfo,
+			...linkInfo,
+			...aboutMeInfo
+		}
+		let colors = {
+			color1: "hsl(30,50%,50%)",
+			color2: "hsl(50,75%,50%)"
+		}
+		console.log("#########################################")
+		// p(chalk.cyan(JSON.stringify(dataset.posts[0].metadata.post_picture.imgix_url)))
+		console.log("#######################################")
+	  res.render('index',{dataset});
 	}catch(e){
 		console.error(e);
 	}
