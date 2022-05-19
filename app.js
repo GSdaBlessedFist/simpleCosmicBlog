@@ -34,7 +34,7 @@ const p = console.log;
 const publicDirectory = path.join(__dirname, "/public");
 const viewsPath = path.join(__dirname, "./src/templates/views");
 const partialsPath = path.join(__dirname, "./src/templates/partials");
-app.use(express.urlencoded({  extend:false  }));
+app.use(express.urlencoded({  extended:false  }));
 app.use(express.json());
 // Handlebars engine and views location
 app.set("view engine", "hbs");
