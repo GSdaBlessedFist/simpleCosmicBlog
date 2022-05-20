@@ -28,7 +28,7 @@ const sharp = require('sharp');
 	}
 })()
 ////////////////////////////////////
-const port = process.env.PORT || 3400;
+const port = process.env.PORT || 3401;
 const p = console.log;
 // Express config
 const publicDirectory = path.join(__dirname, "/public");
@@ -70,9 +70,9 @@ app.get("/", async(req, res) => {
 			},
 			props: "id,slug,title,content,metadata"
 		})
-		let picturesData = await bucket.getMedia({
-			props: "imgix_url"
-		});
+		// let picturesData = await bucket.getMedia({
+		// 	props: "imgix_url"
+		// });
 		let linksData = await bucket.getObjects({
 			query:{
 				type: "links"
